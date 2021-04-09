@@ -5,9 +5,27 @@
 .clearfix:after{clear: both;}
 input{ border: none; outline: none; background-color: transparent; }
 ul,ol{list-style-type: none;}
-a{text-decoration: none;color: inherit;}
+a{text-decoration: none;color:#000  !important;}
 img{vertical-align: top;width: 100%;height: 100%;}
 em,i{font-style: normal;}
+
+/* iconfont引入 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('./iconfont/iconfont.eot');
+  src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('./iconfont/iconfont.woff2') format('woff2'),
+      url('./iconfont/iconfont.woff') format('woff'),
+      url('./iconfont/iconfont.ttf') format('truetype'),
+      url('./iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .appbox{
   width: 100%;
@@ -40,4 +58,25 @@ em,i{font-style: normal;}
   height: 40px;
   line-height: 40px;
   font-size: 16px;
+}
+.iconodf{
+  background-color: rgb(0,21,41) !important;
+  border: none  !important;
+}
+.nav_one{
+  height: 91.7vh;
+  background-color: rgb(0,21,41);
+  float: left;
+}
+.btnyes{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.linkto{
+  color: #fff  !important;
+}
+.conten{
+  width: 100%;
+  float: right;
 }

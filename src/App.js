@@ -48,10 +48,10 @@ function App(props) {
           <img src={img} alt="logo"></img>
         </div>
         <div className="nav_list">
-          <div><Link to="/App">办公</Link> </div>
-          <div><Link to="/App/no2">客户管理</Link> </div>
-          <div><Link to="/App/no3">商业智能</Link> </div> 
-          <div><Link to="/App/no4">项目管理</Link> </div>
+          <div><Link to="/App"> <span className='iconfont'>&#xe625;</span> 办公</Link> </div>
+          <div><Link to="/App/no2"> <span className='iconfont'>&#xe68e;</span> 客户管理</Link> </div>
+          <div><Link to="/App/no3"> <span className='iconfont'>&#xe673;</span> 商业智能</Link> </div> 
+          <div><Link to="/App/no4"> <span className='iconfont'>&#xe628;</span> 项目管理</Link> </div>
         </div>
       </div>
       <div>
