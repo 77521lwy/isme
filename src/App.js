@@ -41,7 +41,7 @@ function App(props) {
   return (
     <div>
       {/* 头部导航 */}
-      <div className="nav_box">
+      <div className="nav_box"> 
         <div className="nav_logo"></div>
         <div className="nav_list">
           <div><Link to="/App">办公</Link> </div>
