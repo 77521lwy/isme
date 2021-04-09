@@ -24,7 +24,6 @@ function No2() {
             <Link to="/app/no2/no2_7_1">合同</Link><br/>
             <Link to="/app/no2/no2_8_1">回款</Link><br/>
             <Link to="/app/no2/no2_9_1">产品</Link><br/>
-            
             <Switch>
                 <Route path="/app/no2/no2_0_1" component={no2_0_1} exact></Route>
                 <Route path="/app/no2/no2_1_1" component={no2_1_1}></Route>

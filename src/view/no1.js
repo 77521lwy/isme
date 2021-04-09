@@ -1,70 +1,39 @@
-import React, {  } from 'react';
-import { Menu,  } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import React, {} from 'react';
+import {Switch,Route,Link} from 'react-router-dom' 
+import No1_1 from './no1_1'
+import No1_2 from './no1_2'
+import No1_3 from './no1_3'
+import No1_4 from './no1_4'
+import No1_5 from './no1_5'
+import No1_6 from './no1_6'
+import No1_7 from './no1_7'
 
-import moment from 'moment';
-import 'moment/locale/zh-cn';
-import 'antd/dist/antd.css';
-const { SubMenu } = Menu;
 
-moment.locale('zh-cn');
-
-class App extends React.Component {
-    state = {
-      theme: 'dark',
-      current: '1',
-    };
-  
-    changeTheme = value => {
-      this.setState({
-        theme: value ? 'dark' : 'light',
-      });
-    };
-  
-    handleClick = e => {
-      console.log('click ', e);
-      this.setState({
-        current: e.key,
-      });
-    };
-  
-    render() {
-      return (
-        <div>
-          
-          <Menu
-            theme={this.state.theme}
-            onClick={this.handleClick}
-            style={{ width: 256 }}
-            defaultOpenKeys={['sub1']}
-            selectedKeys={[this.state.current]}
-            mode="inline"
-          >
-            <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-              <Menu.Item key="1">Option 1</Menu.Item>
-              <Menu.Item key="2">Option 2</Menu.Item>
-              <Menu.Item key="3">Option 3</Menu.Item>
-              <Menu.Item key="4">Option 4</Menu.Item>
-            </SubMenu>
-            <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
-              <Menu.Item key="5">Option 5</Menu.Item>
-              <Menu.Item key="6">Option 6</Menu.Item>
-              <SubMenu key="sub3" title="Submenu">
-                <Menu.Item key="7">Option 7</Menu.Item>
-                <Menu.Item key="8">Option 8</Menu.Item>
-              </SubMenu>
-            </SubMenu>
-            <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three">
-              <Menu.Item key="9">Option 9</Menu.Item>
-              <Menu.Item key="10">Option 10</Menu.Item>
-              <Menu.Item key="11">Option 11</Menu.Item>
-              <Menu.Item key="12">Option 12</Menu.Item>
-            </SubMenu>
-          </Menu>
-        </div>
-      );
-    }
-  }
+function App(){
+  return(
+    <div>
+      <div><Link to="/App/">1</Link></div>
+      <div><Link to="/App/no1_2">2</Link></div>
+      <div><Link to="/App/no1_3">3</Link></div>
+      <div><Link to="/App/no1_4">4</Link></div>
+      <div><Link to="/App/no1_5">5</Link></div>
+      <div><Link to="/App/no1_6">6</Link></div>
+      <div><Link to="/App/no1_7">7</Link></div>
+      <hr></hr>
+      <div>
+        <Switch>
+          <Route path='/APP/no1_2' component={No1_2}></Route>
+          <Route path='/APP/no1_3' component={No1_3}></Route>
+          <Route path='/APP/no1_4' component={No1_4}></Route>
+          <Route path='/APP/no1_5' component={No1_5}></Route>
+          <Route path='/APP/no1_6' component={No1_6}></Route>
+          <Route path='/APP/no1_7' component={No1_7}></Route>
+          <Route path='/APP/' component={No1_1}></Route>
+        </Switch>
+      </div>
+    </div>
+  )
+}
   
   
 
