@@ -3,8 +3,10 @@ import axios from 'axios'
 import './App.css';
 import No1 from './view/no1'
 import No2 from './view/no2'
+
 import No3 from './view/no3'
 import No4 from './view/no4'
+import img from './images/logo.png'
 
 axios.interceptors.request.use((config)=>{
   if(localStorage.val){
@@ -39,29 +41,28 @@ function App(props) {
 
   console.log(props)
   return (
-    <div>
+    <div className="appbox">
       {/* 头部导航 */}
-      <div className="nav_box">
-        <div className="nav_logo"></div>
+      <div className="nav_box clearfix">
+        <div className="nav_logo">
+          <img src={img} alt="logo"></img>
+        </div>
         <div className="nav_list">
-          <div><Link to="/App">办公</Link> </div>
-          <div><Link to="/App/no2">客户管理</Link> </div>
-          <div><Link to="/App/no3">商业智能</Link> </div> 
-          <div><Link to="/App/no4">项目管理</Link> </div>
+          <div><Link to="/App"> <span className='iconfont'>&#xe625;</span> 办公</Link> </div>
+          <div><Link to="/App/no2"> <span className='iconfont'>&#xe68e;</span> 客户管理</Link> </div>
+          <div><Link to="/App/no3"> <span className='iconfont'>&#xe673;</span> 商业智能</Link> </div> 
+          <div><Link to="/App/no4"> <span className='iconfont'>&#xe628;</span> 项目管理</Link> </div>
         </div>
       </div>
       <div>
         {/* 路由配置 */}
         <Switch>
-          <Route path="/App/" component={No1} exact />
           <Route path="/App/no2" component={No2} />
           <Route path="/App/no3" component={No3} />
           <Route path="/App/no4" component={No4} /> 
+          <Route path="/App" component={No1}  />
         </Switch>
       </div>
-
-
-      
     </div>
   );
 }
