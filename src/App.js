@@ -5,6 +5,7 @@ import No1 from './view/no1'
 import No2 from './view/no2'
 import No3 from './view/no3'
 import No4 from './view/no4'
+import img from './images/logo.png'
 
 axios.interceptors.request.use((config)=>{
   if(localStorage.val){
@@ -39,10 +40,12 @@ function App(props) {
 
   console.log(props)
   return (
-    <div>
+    <div className="appbox">
       {/* 头部导航 */}
-      <div className="nav_box">
-        <div className="nav_logo"></div>
+      <div className="nav_box clearfix">
+        <div className="nav_logo">
+          <img src={img} alt="logo"></img>
+        </div>
         <div className="nav_list">
           <div><Link to="/App">办公</Link> </div>
           <div><Link to="/App/no2">客户管理</Link> </div>
