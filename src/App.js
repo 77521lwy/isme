@@ -56,15 +56,12 @@ function App(props) {
       <div>
         {/* 路由配置 */}
         <Switch>
-          <Route path="/App/" component={No1} exact />
           <Route path="/App/no2" component={No2} />
           <Route path="/App/no3" component={No3} />
           <Route path="/App/no4" component={No4} /> 
+          <Route path="/App" component={No1}  />
         </Switch>
       </div>
-
-
-      
     </div>
   );
 }
