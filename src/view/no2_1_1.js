@@ -20,7 +20,7 @@ let No2_1_1=function(props){
             <Link to="/app/no2/no2_2_7">待回款提醒</Link><br/>
             <Link to="/app/no2/no2_2_8">即将到期的合同</Link><br/>
             <Switch>
-                <Route path="/no2_2_1/no2_2_2" component={no2_2_2} exact></Route>
+                <Route path="//no2_2_1/no2_2_2" component={no2_2_2} exact></Route>
                 <Route path="/no2_2_1/no2_2_3" component={no2_2_3}></Route>
                 <Route path="/no2_2_1/no2_2_4" component={no2_2_4}></Route>
                 <Route path="/no2_2_1/no2_2_5" component={no2_2_5}></Route>
