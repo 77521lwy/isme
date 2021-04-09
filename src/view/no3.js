@@ -5,8 +5,6 @@ import {
   AppstoreOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
   ContainerOutlined,
   MailOutlined,
 } from '@ant-design/icons';
