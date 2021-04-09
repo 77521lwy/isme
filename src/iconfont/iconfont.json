@@ -1,0 +1,107 @@
+{
+  "id": "2472599",
+  "name": "李飞",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "568990",
+      "name": "通讯录",
+      "font_class": "tongxunlu",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "1206411",
+      "name": "三角",
+      "font_class": "sanjiao",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "1331059",
+      "name": "电脑",
+      "font_class": "diannao",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "4641123",
+      "name": "日程",
+      "font_class": "richeng",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "4933240",
+      "name": "审批",
+      "font_class": "shenpi",
+      "unicode": "e6ff",
+      "unicode_decimal": 59135
+    },
+    {
+      "icon_id": "4933353",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "5737022",
+      "name": "商业-29",
+      "font_class": "shangye-",
+      "unicode": "ea8e",
+      "unicode_decimal": 60046
+    },
+    {
+      "icon_id": "5922238",
+      "name": "103_项目管理",
+      "font_class": "_xiangmuguanli",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "8575343",
+      "name": "消息 ",
+      "font_class": "xiaoxi",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "11121442",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "13700285",
+      "name": "任务",
+      "font_class": "renwujianying",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "14152438",
+      "name": "任务",
+      "font_class": "renwu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "14434924",
+      "name": "公告",
+      "font_class": "gonggao",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "20012909",
+      "name": "日志",
+      "font_class": "huaban43",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
