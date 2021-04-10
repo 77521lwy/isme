@@ -5,8 +5,6 @@ import {
   AppstoreOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
   ContainerOutlined,
   MailOutlined,
 } from '@ant-design/icons';
@@ -63,43 +61,45 @@ function No3(){
       };
     return(
         <div>
-            <Switch>
-                <Route path="/App/no3/" component={no3_1_1} exact/>
-                <Route path="/App/no3/no3_1_2" component={no3_1_2}/>
-                <Route path="/App/no3/no3_1_3" component={no3_1_3}/>
-                <Route path="/App/no3/no3_1_4" component={no3_1_4}/>
-                <Route path="/App/no3/no3_1_5" component={no3_1_5}/>
+            <div>
+                <Switch>
+                    <Route path="/App/no3/" component={no3_1_1} exact/>
+                    <Route path="/App/no3/no3_1_2" component={no3_1_2}/>
+                    <Route path="/App/no3/no3_1_3" component={no3_1_3}/>
+                    <Route path="/App/no3/no3_1_4" component={no3_1_4}/>
+                    <Route path="/App/no3/no3_1_5" component={no3_1_5}/>
 
-                <Route path="/App/no3/no3_2_1" component={no3_2_1}/>
-                <Route path="/App/no3/no3_2_2" component={no3_2_2}/>
-                <Route path="/App/no3/no3_2_3" component={no3_2_3}/>
+                    <Route path="/App/no3/no3_2_1" component={no3_2_1}/>
+                    <Route path="/App/no3/no3_2_2" component={no3_2_2}/>
+                    <Route path="/App/no3/no3_2_3" component={no3_2_3}/>
 
-                <Route path="/App/no3/no3_3_1" component={no3_3_1}/>
-                <Route path="/App/no3/no3_3_2" component={no3_3_2}/>
-                <Route path="/App/no3/no3_3_3" component={no3_3_3}/>
-                <Route path="/App/no3/no3_3_4" component={no3_3_4}/>
+                    <Route path="/App/no3/no3_3_1" component={no3_3_1}/>
+                    <Route path="/App/no3/no3_3_2" component={no3_3_2}/>
+                    <Route path="/App/no3/no3_3_3" component={no3_3_3}/>
+                    <Route path="/App/no3/no3_3_4" component={no3_3_4}/>
 
-                <Route path="/App/no3/no3_4_1" component={no3_4_1}/>
-                <Route path="/App/no3/no3_4_2" component={no3_4_2}/>
-                <Route path="/App/no3/no3_4_3" component={no3_4_3}/>
-                <Route path="/App/no3/no3_4_4" component={no3_4_4}/>
+                    <Route path="/App/no3/no3_4_1" component={no3_4_1}/>
+                    <Route path="/App/no3/no3_4_2" component={no3_4_2}/>
+                    <Route path="/App/no3/no3_4_3" component={no3_4_3}/>
+                    <Route path="/App/no3/no3_4_4" component={no3_4_4}/>
 
-                <Route path="/App/no3/no3_5_1" component={no3_5_1}/>
-                <Route path="/App/no3/no3_5_2" component={no3_5_2}/>
+                    <Route path="/App/no3/no3_5_1" component={no3_5_1}/>
+                    <Route path="/App/no3/no3_5_2" component={no3_5_2}/>
 
-                <Route path="/App/no3/no3_6_1" component={no3_6_1}/>
-                <Route path="/App/no3/no3_6_2" component={no3_6_2}/>
-                <Route path="/App/no3/no3_6_3" component={no3_6_3}/>
-                <Route path="/App/no3/no3_6_4" component={no3_6_4}/>
-                <Route path="/App/no3/no3_6_5" component={no3_6_5}/>
-                <Route path="/App/no3/no3_6_6" component={no3_6_6}/>
-                <Route path="/App/no3/no3_6_7" component={no3_6_7}/>
-                <Route path="/App/no3/no3_6_8" component={no3_6_8}/>
+                    <Route path="/App/no3/no3_6_1" component={no3_6_1}/>
+                    <Route path="/App/no3/no3_6_2" component={no3_6_2}/>
+                    <Route path="/App/no3/no3_6_3" component={no3_6_3}/>
+                    <Route path="/App/no3/no3_6_4" component={no3_6_4}/>
+                    <Route path="/App/no3/no3_6_5" component={no3_6_5}/>
+                    <Route path="/App/no3/no3_6_6" component={no3_6_6}/>
+                    <Route path="/App/no3/no3_6_7" component={no3_6_7}/>
+                    <Route path="/App/no3/no3_6_8" component={no3_6_8}/>
 
-                <Route path="/App/no3/no3_7_1" component={no3_7_1}/>
-                <Route path="/App/no3/no3_7_2" component={no3_7_2}/>
-            </Switch>    
-            <div style={{ width: 256 }}>
+                    <Route path="/App/no3/no3_7_1" component={no3_7_1}/>
+                    <Route path="/App/no3/no3_7_2" component={no3_7_2}/>
+                </Switch>
+            </div>    
+            <div style={{ width: 256}}>
                 <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
                 {React.createElement(state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                 </Button>
