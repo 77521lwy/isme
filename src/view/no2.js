@@ -4,63 +4,42 @@ import { Menu, Button } from 'antd';
 import 'moment/locale/zh-cn';
 
 import 'antd/dist/antd.css';
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import {
-    AppstoreOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-    PieChartOutlined,
-    DesktopOutlined,
-    ContainerOutlined,
-    MailOutlined,
-  } from '@ant-design/icons';
-import no2_0_1 from './no2_0_1'
-import no2_1_1 from './no2_1_1'
-import no2_2_1 from './no2_2_1'
-import no2_3_1 from './no2_3_1'
-import no2_4_1 from './no2_4_1'
-import no2_5_1 from './no2_5_1'
-import no2_6_1 from './no2_6_1'
-import no2_7_1 from './no2_7_1'
-import no2_8_1 from './no2_8_1'
-import no2_9_1 from './no2_9_1'
+  AppstoreOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  PieChartOutlined,
+  DesktopOutlined,
+  ContainerOutlined,
+  MailOutlined,
+} from '@ant-design/icons';
+import no2_0 from './no2_0'
+import no2_1 from './no2_1'
+import no2_2 from './no2_2'
+import no2_3 from './no2_3'
+import no2_4 from './no2_4'
+import no2_5 from './no2_5'
+import no2_6 from './no2_6'
+import no2_7 from './no2_7'
+import no2_8 from './no2_8'
+import no2_9 from './no2_9'
 
 
 const { SubMenu } = Menu;
-function No2(){
-    let [state,setState] =useState({
-        collapsed: false,
-      })
-    
-     let toggleCollapsed = () => {
-        setState({
-          collapsed: !state.collapsed,
-        })}
-    return (
-        <div>
-            <Link to="/app/no2/no2_0_1">仪表盘0</Link><br/>
-            <Link to="/app/no2/no2_1_1">待办事项1</Link><br/>
-            <Link to="/app/no2/no2_2_1">线索2</Link><br/>
-            <Link to="/app/no2/no2_3_1">客户3</Link><br/>
-            <Link to="/app/no2/no2_4_1">联系人4</Link><br/>
-            <Link to="/app/no2/no2_5_1">公海5</Link><br/>
-            <Link to="/app/no2/no2_6_1">商机6</Link><br/>
-            <Link to="/app/no2/no2_7_1">合同7</Link><br/>
-            <Link to="/app/no2/no2_8_1">回款8</Link><br/>
-            <Link to="/app/no2/no2_9_1">产品9</Link><br/>
-            <Switch>
-                <Route path="/app/no2" component={no2_0_1} exact></Route>
-                <Route path="/app/no2/no2_1_1" component={no2_1_1}></Route>
-                <Route path="/app/no2/no2_2_1" component={no2_2_1}></Route>
-                <Route path="/app/no2/no2_3_1" component={no2_3_1}></Route>
-                <Route path="/app/no2/no2_4_1" component={no2_4_1}></Route>
-                <Route path="/app/no2/no2_5_1" component={no2_5_1}></Route>
-                <Route path="/app/no2/no2_6_1" component={no2_6_1}></Route>
-                <Route path="/app/no2/no2_7_1" component={no2_7_1}></Route>
-                <Route path="/app/no2/no2_8_1" component={no2_8_1}></Route>
-                <Route path="/app/no2/no2_9_1" component={no2_9_1}></Route>
-            </Switch>
-            <div style={{ width: 256 }}>
+function No2() {
+  let [state, setState] = useState({
+    collapsed: false,
+  })
+
+  let toggleCollapsed = () => {
+    setState({
+      collapsed: !state.collapsed,
+    })
+  }
+  return (
+    <div>
+      <div style={{ width: 256 }}>
         <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
           {React.createElement(state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
         </Button>
@@ -69,40 +48,58 @@ function No2(){
           defaultOpenKeys={['sub1']}
           mode="inline"
           theme="dark"
-          inlineCollapsed={  state.collapsed}
+          inlineCollapsed={state.collapsed}
         >
           <Menu.Item key="1" icon={<PieChartOutlined />}>
-           仪表盘
+            <Link to="/app/no2/no2_0">仪表盘0</Link><br />
+
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
-            待办事项
+            <Link to="/app/no2/no2_1">待办事项1</Link><br />
+
           </Menu.Item>
           <Menu.Item key="3" icon={<ContainerOutlined />}>
-            线索
+            <Link to="/app/no2/no2_2">线索2</Link><br />
           </Menu.Item>
           <Menu.Item key="4" icon={<ContainerOutlined />}>
-            客户
+            <Link to="/app/no2/no2_3">客户3</Link><br />
           </Menu.Item>
           <Menu.Item key="5" icon={<ContainerOutlined />}>
-            联系人
+            <Link to="/app/no2/no2_4">联系人4</Link><br />
           </Menu.Item>
           <Menu.Item key="6" icon={<ContainerOutlined />}>
-            公海
+            <Link to="/app/no2/no2_5">公海5</Link><br />
           </Menu.Item>
           <Menu.Item key="7" icon={<ContainerOutlined />}>
-            商机
+            <Link to="/app/no2/no2_6">商机6</Link><br />
           </Menu.Item>
           <Menu.Item key="8" icon={<ContainerOutlined />}>
-            合同
+            <Link to="/app/no2/no2_7">合同7</Link><br />
           </Menu.Item>
           <Menu.Item key="9" icon={<ContainerOutlined />}>
-            回款
+            <Link to="/app/no2/no2_8">回款8</Link><br />
           </Menu.Item>
-          
+          <Menu.Item key="10" icon={<ContainerOutlined />}>
+            <Link to="/app/no2/no2_9">产品9</Link><br />
+          </Menu.Item>
         </Menu>
       </div>
-        </div>
-    )
-    }
+      <div>
+        <Switch>
+          <Route path="/app/no2/no2_1" component={no2_1}></Route>
+          <Route path="/app/no2/no2_2" component={no2_2}></Route>
+          <Route path="/app/no2/no2_3" component={no2_3}></Route>
+          <Route path="/app/no2/no2_4" component={no2_4}></Route>
+          <Route path="/app/no2/no2_5" component={no2_5}></Route>
+          <Route path="/app/no2/no2_6" component={no2_6}></Route>
+          <Route path="/app/no2/no2_7" component={no2_7}></Route>
+          <Route path="/app/no2/no2_8" component={no2_8}></Route>
+          <Route path="/app/no2/no2_9" component={no2_9}></Route>
+          <Route path="/app/no2" component={no2_0}></Route>
+        </Switch>
+      </div>
+    </div>
+  )
+}
 
 export default No2
