@@ -1,4 +1,4 @@
-let No3_7_1=function(params){
+let No3_7_1 = function(params){
     return(
         <div>no3_7_1</div>
     )

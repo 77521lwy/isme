@@ -63,13 +63,9 @@ function App(){
             <Link className="linkto"  to="/App/no1_7">通讯录</Link>
           </Menu.Item>
         </Menu>
-        <div className='btnyes'>
-          <Button type="primary" onClick={toggleCollapsed} className="iconodf" >
-            {React.createElement(state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-          </Button>
-        </div>
       </div>
       <div className="conten">
+        <div>
         <Switch>
           <Route path='/APP/no1_2' component={No1_2}></Route>
           <Route path='/APP/no1_3' component={No1_3}></Route>
@@ -79,6 +75,7 @@ function App(){
           <Route path='/APP/no1_7' component={No1_7}></Route>
           <Route path='/APP/' component={No1_1}></Route>
         </Switch>
+        </div>
       </div>
     </div>
   )
