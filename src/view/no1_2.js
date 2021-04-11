@@ -36,7 +36,7 @@ function App() {
 
         <div className="no1_2_box">
 
-            <div className="no1_1_nav">   {/* 导航部分 */}
+            <div className="no1_2_nav">   {/* 导航部分 */}
                 <div className="no1_1_navtop">
                     <div>
                         <button className="navtop_left">今天</button>
@@ -63,7 +63,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="no1_1_content"> {/*  内容 */}
+            <div className="no1_2_content"> {/*  内容 */}
                 <Calendar onPanelChange={onPanelChange} />   {/*ant此组件功能插入不进去*/}
 
             </div>

@@ -14,24 +14,24 @@ function App(){
         <div className="no1_1_box">
             <div className="no1_1_left">
                 <div>
-                <div className="no1_1_nav">
-                    <div><Link to="/App/">全部</Link></div>
-                    <div><Link to="/APP/no1_1/no1_1_2">日志</Link></div>
-                    <div><Link to="/APP/no1_1/no1_1_3">审批</Link></div>
-                    <div><Link to="/APP/no1_1/no1_1_4">任务</Link></div>
-                    <div><Link to="/APP/no1_1/no1_1_5">日程</Link></div>
-                    <div><Link to="/APP/no1_1/no1_1_6">公告</Link></div>
-                </div>
-                <div className="no1_1_content">
-                    <Switch>
-                        <Route path='/APP/no1_1/no1_1_2' component={No1_1_2}></Route>
-                        <Route path='/APP/no1_1/no1_1_3' component={No1_1_3}></Route>
-                        <Route path='/APP/no1_1/no1_1_4' component={No1_1_4}></Route>
-                        <Route path='/APP/no1_1/no1_1_5' component={No1_1_5}></Route>
-                        <Route path='/APP/no1_1/no1_1_6' component={No1_1_6}></Route>
-                        <Route path='/APP/' component={No1_1_1}></Route>
-                    </Switch>
-                </div>
+                    <div className="no1_1_nav">
+                        <div><Link to="/App/">全部</Link></div>
+                        <div><Link to="/APP/no1_1/no1_1_2">日志</Link></div>
+                        <div><Link to="/APP/no1_1/no1_1_3">审批</Link></div>
+                        <div><Link to="/APP/no1_1/no1_1_4">任务</Link></div>
+                        <div><Link to="/APP/no1_1/no1_1_5">日程</Link></div>
+                        <div><Link to="/APP/no1_1/no1_1_6">公告</Link></div>
+                    </div>
+                    <div className="no1_1_content">
+                        <Switch>
+                            <Route path='/APP/no1_1/no1_1_2' component={No1_1_2}></Route>
+                            <Route path='/APP/no1_1/no1_1_3' component={No1_1_3}></Route>
+                            <Route path='/APP/no1_1/no1_1_4' component={No1_1_4}></Route>
+                            <Route path='/APP/no1_1/no1_1_5' component={No1_1_5}></Route>
+                            <Route path='/APP/no1_1/no1_1_6' component={No1_1_6}></Route>
+                            <Route path='/APP/' component={No1_1_1}></Route>
+                        </Switch>
+                    </div>
                 </div>
             </div>
             <div className="no1_1_right">
