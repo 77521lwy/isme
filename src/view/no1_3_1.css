@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.no1_3_1_title input{
+    border: 1px solid #ddd;
+    width: 328px;
+    height: 36px;
+    text-indent: 1em;
+    background: #fff;
+    
+}
+.no1_3_1_input{
+    margin-left: 3%;
+}
+.no1_3_1_title div{
+    min-height: 37px;
+}
+.no1_3_1_title ul{
+    padding: 0px 3%;
+}
+.no1_3_1_title ul li{
+    height: 37px;
+    line-height: 37px;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.no1_3_1_title ul li:nth-of-type(2n-1){
+    width: 60px;
+}
+.no1_3_1_title ul li:nth-of-type(2n){
+    width: 110px;
+}
+.DownOutlined{
+    float: right;
+}
+.no1_3_1_content{
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+    text-align: center;
+}

@@ -6,13 +6,11 @@ import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
 import {
-  AppstoreOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   PieChartOutlined,
   DesktopOutlined,
   ContainerOutlined,
-  MailOutlined,
 } from '@ant-design/icons';
 import no2_0 from './no2_0'
 import no2_1 from './no2_1'
@@ -26,7 +24,6 @@ import no2_8 from './no2_8'
 import no2_9 from './no2_9'
 
 
-const { SubMenu } = Menu;
 function No2() {
   let [state, setState] = useState({
     collapsed: false,
