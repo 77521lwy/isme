@@ -46,7 +46,7 @@ function App(){
             <div className="no1_4_top">
                 <div className="no1_4_left">公告</div>
                 <div className="no1_4_btna clearfix">
-                    <Button type="primary" onClick={showModal}>
+                    <Button type="primary" onClick={showModal} style={{margin:'0px'}}>
                         新建公告
                     </Button>
                     <Modal title="新建公告" okText="取消" cancelText="确认" className="clearfix" maskStyle={{background:'rgba(255,255,255,.99)'}}  visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
