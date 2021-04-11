@@ -26,20 +26,6 @@ function App(props) {
   if(!localStorage.val){
     props.history.push('/')
   }
-
-  axios.post('http://crm.cimns.com/index.php/oa/task/subTaskList',{        
-    status: 1,
-    limit: 15,
-    page: 2,
-    // 状态
-    // limit 返回数据条数
-    // page 页码
-  })
-  .then((data) => {
-    console.log(data)
-  })
-
-  console.log(props)
   return (
     <div className="appbox">
       {/* 头部导航 */}

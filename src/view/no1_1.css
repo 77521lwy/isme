@@ -1,0 +1,102 @@
+ /* 去除默认样式 */
+*{margin: 0;padding: 0;}
+.clearfix:after,
+.clearfix:before{content: '';display: table;}
+.clearfix:after{clear: both;}
+input{ border: none; outline: none; background-color: transparent; }
+ul,ol{list-style-type: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+em,i{font-style: normal;}
+
+.no1_1_left{
+    width: 770px;
+    float: left;
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius:4px ;
+    height: 630px;
+}
+.no1_1_right{
+    width: 330px;
+    float: left;
+}
+.no1_1_nav{
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-bottom: #ccc solid 2px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.no1_1_nav div{
+    padding: 0 10px;
+    margin: 0 10px;
+}
+.no1_1_nav .active{
+    border-bottom: green 2px solid ;
+    margin-bottom: -2px;
+}
+.no1_1_content{
+    width: 100%;
+    height: 540px;
+    overflow-x:auto ;
+}
+.no1_1_content::-webkit-scrollbar{
+    width: 5px;
+    background-color: #eee;
+    border-radius:1px ;
+}
+.no1_1_content::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.no1_1_renwu{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    /* border: #ccc solid 1px; */
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.no1_1_renwu_title{
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #eeee;
+}
+.no1_1_renwu_content{
+    min-height: 120px;
+}
+
+.no1_1_richeng{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    /* border: #ccc solid 1px; */
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.no1_1_yicheng_title{
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #ccc;
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 10px;
+}
+.no1_1_yicheng_tit{
+    float: left;
+}
+.no1_1_yicheng_jia{
+    float: right;
+    color: #3e84e9;
+}
+.site-calendar-demo-card {
+    width: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+  }
