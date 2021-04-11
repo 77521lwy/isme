@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState} from 'react'
 import './no1_1_1.css'
 import wu from '../images/wu.png'
+import SP from './shnepi'
 
 function App(){
     
@@ -62,7 +63,8 @@ function App(){
                                     <p className="txt_type"><span className="iconfont type_a">&#xe695;</span> {item.type_name}</p>
                                 </div>
                                 <p className="item_time">{getTime(item.create_time)}</p>
-                                <div className="item_slo">{item.title}</div>
+                                <div className="item_slo"><SP us={item}></SP></div>
+                                
                             </div>
                         </div>
                     )
