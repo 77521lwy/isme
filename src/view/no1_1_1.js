@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {useState} from 'react'
 import './no1_1_1.css'
+import wu from '../images/wu.png'
 
 function App(){
     
@@ -51,7 +52,9 @@ function App(){
                 {list.map((item,index)=>{
                     return(
                         <div key={index} className="item_no1_1_1">
-                            <div className='item_img'>理员</div>
+                            <div className='item_img'>
+                                <img alt="管理" src={item.create_user_info.img===''?wu:item.create_user_info.img}></img>
+                            </div>
                             <div className="item_txt">
                                 <div className="text_top">
                                     <p className="txt_name">{item.create_user_info.realname}</p>

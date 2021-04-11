@@ -1,11 +1,7 @@
-
-
 import { Calendar, Alert } from 'antd';  //组件1
 import moment from 'moment';
-
 import React, { useState } from 'react'; //组件2
 import { Modal, Button } from 'antd';
-
 import { DatePicker, Space } from 'antd'; //组件3 小日历
 
 
@@ -65,7 +61,6 @@ function App() {
 
             <div className="no1_2_content"> {/*  内容 */}
                 <Calendar onPanelChange={onPanelChange} />   {/*ant此组件功能插入不进去*/}
-
             </div>
         </div>
     )
