@@ -5,13 +5,11 @@
 .no1_3_nav{
     width: 100%;
     min-height: 100%;
-    padding: 15px;
-    background: #ddd;
     box-sizing: border-box;
 }
 .no1_3_nav_1{
     width: 70%;
-    min-height: 800px;
+    min-height: 700px;
     border-radius: 1%;
     background: #fff;
     box-sizing: border-box;
@@ -70,6 +68,7 @@
 }
 .no1_3_title_2 button{
     border: none;
+    margin-top: 0px;
 }
 .no1_3_Modal_1{
     height: 205px;
