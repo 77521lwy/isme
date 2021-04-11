@@ -70,8 +70,8 @@ function No4(){
                     <Menu.Item key="6">任务日历</Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" icon={<AppstoreOutlined />} title="项目">
-                    <Menu.Item key="9">Option 9</Menu.Item>
-                    <Menu.Item key="10">Option 10</Menu.Item>
+                    <Menu.Item key="7">Option 9</Menu.Item>
+                    <Menu.Item key="8">Option 10</Menu.Item>
                 </SubMenu>
                 <Menu.Item key="3" icon={<DesktopOutlined />}>
                     统计分析
@@ -79,11 +79,11 @@ function No4(){
                 <Menu.Item key="2" icon={<DesktopOutlined />}>
                     归档项目
                 </Menu.Item>
-                <SubMenu key="sub1" icon={<MailOutlined />} title="标签">
-                    <Menu.Item key="5">我的任务</Menu.Item>
-                    <Menu.Item key="6">任务日历</Menu.Item>
+                <SubMenu key="sub3" icon={<MailOutlined />} title="标签">
+                    <Menu.Item key="9">我的任务</Menu.Item>
+                    <Menu.Item key="10">任务日历</Menu.Item>
                 </SubMenu>
-                <Menu.Item key="3" icon={<ContainerOutlined />}>
+                <Menu.Item key="11" icon={<ContainerOutlined />}>
                     回收站
                 </Menu.Item>
                 </Menu>
