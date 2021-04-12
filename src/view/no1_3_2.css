@@ -11,13 +11,13 @@
     
 }
 .no1_3_2_input{
-    margin-left: 3%;
+    margin-left: 5%;
 }
 .no1_3_2_title div{
     min-height: 100px;
 }
 .no1_3_2_title ul{
-    padding: 0px 3%;
+    padding: 0px 5%;
 }
 .no1_3_2_title ul li{
     height: 37px;
@@ -27,10 +27,10 @@
     margin-right: 10px;
 }
 .no1_3_2_title ul li:nth-of-type(2n-1){
-    width: 60px;
+    width: 65px;
 }
 .no1_3_2_title ul li:nth-of-type(2n){
-    width: 110px;
+    width: 115px;
 }
 .DownOutlined{
     float: right;
