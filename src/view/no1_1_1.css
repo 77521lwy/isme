@@ -164,3 +164,32 @@ em,i{font-style: normal;}
     margin-right: 5px;
     display: inline-block;
 }
+.foniinnini{
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 10px;
+}
+.foniinnini span{
+    display: inline-block;
+    width: 80px;
+}
+.asdgjdssjagd_title{
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+
+}
+.asdgjdssjagd_time{
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+    text-align: center;
+    color: #9999;
+}
+.asdgjdssjagd_content{
+    margin-top: 20px;
+    line-height: 24px;
+    color: #333;
+    font-size: 16px;
+    min-height: 48px;
+}

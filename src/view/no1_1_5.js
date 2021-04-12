@@ -2,6 +2,8 @@ import axios from 'axios'
 import {useState} from 'react'
 import './no1_1_1.css'
 import wu from '../images/wu.png'
+import RC from './richeng'
+
 
 function App(){
     
@@ -22,30 +24,22 @@ function App(){
     },(err)=>{
         console.log(err)
     })
-    function getTime(data,type){
-        var _data = data;
-        //如果是13位正常，如果是10位则需要转化为毫秒
-        if (String(data).length ===13) {
-          _data = data
-        } else {
-          _data = data*1000
-        }
-        const time = new Date(_data);    
-        const Y = time.getFullYear();
-        const Mon = time.getMonth() + 1;
-        const Day = time.getDate();
-        const H = time.getHours();
-        const Min = time.getMinutes();
-        const S = time.getSeconds();
-        //自定义选择想要返回的类型
-        if(type==="Y"){
-          return `${Y}-${Mon}-${Day}`
-        }else if(type==="H"){
-          return `${H}:${Min}:${S}`
-        }else{
-          return `${Y}-${Mon}-${Day} ${H}:${Min}:${S}`
-        }
-      }
+    function getTime(num){//时间戳数据处理
+		let date = new Date(num*1000);
+		 //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        let y = date.getFullYear();
+        let MM = date.getMonth() + 1;
+        MM = MM < 10 ? ('0' + MM) : MM;//月补0
+        let d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;//天补0
+        let h = date.getHours();
+        h = h < 10 ? ('0' + h) : h;//小时补0
+        let m = date.getMinutes();
+        m = m < 10 ? ('0' + m) : m;//分钟补0
+        let s = date.getSeconds();
+        s = s < 10 ? ('0' + s) : s;//秒补0
+        return y + '-' + MM + '-' + d + ' ' + h + ':' + m+ ':' + s;
+    }
     return(
         <div>
             <div>
@@ -62,7 +56,7 @@ function App(){
                                     <p className="txt_type"><span className="iconfont type_c">&#xe6f5;</span> {item.type_name}</p>
                                 </div>
                                 <p className="item_time">{getTime(item.create_time)}</p>
-                                <div className="item_slo">{item.title}</div>
+                                <div className="item_slo"><RC uc={item}></RC></div>
                             </div>
                         </div>
                     )

@@ -40,7 +40,7 @@ function App(props) {
           <div><Link to="/App/no4"> <span className='iconfont'>&#xe628;</span> 项目管理</Link> </div>
         </div>
       </div>
-      <div>
+      <div className="nav_box_content">
         {/* 路由配置 */}
         <Switch>
           <Route path="/App/no2" component={No2} />
