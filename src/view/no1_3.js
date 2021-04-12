@@ -1,14 +1,36 @@
 import {Switch,Route,Link} from 'react-router-dom' 
-import { Modal, Button,Tabs,Upload, message} from 'antd';
+import { Modal, Button,Tabs,Upload, message,Select} from 'antd';
 import { PaperClipOutlined } from '@ant-design/icons';
 import No1_3_1 from './no1_3_1'
 import No1_3_2 from './no1_3_2'
 import './no1_3.css'
 import {useState} from 'react'
+import axios from 'axios'
+
 
 
 
 function App(){
+    const { Option } = Select;
+    function handleChange(value) {
+        console.log(value);
+      }
+    const [lolpp,setlolpp] =useState([])
+    axios.post('http://crm.cimns.com/index.php/admin/users/getUserList').then((data) => {
+        if (data.data.code === 101) {
+            console.log(data.data.arr)
+        }
+        else{ 
+            if(lolpp.length <= 0){
+                setlolpp(data.data.data)
+            }
+        }
+        console.log(data.data.data)
+    }, (err) => {
+        console.log(err)
+    })
+
+
     const props = {
         name: 'file',
         action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -45,7 +67,7 @@ function App(){
             <div className="no1_3_nav_1">
                 <div className="no1_3_title">
                     <div>
-                        <Tabs defaultActiveKey="2">
+                        <Tabs defaultActiveKey="1">
                             <TabPane tab={<span><Link to="/App/no1_3/">我的任务</Link></span>}key="1">
                                 
                             </TabPane>
@@ -66,7 +88,15 @@ function App(){
                                 </li>
                                 <li>
                                     <h3>负责人</h3>
-                                    <input type="text" placeholder="请输入内容" />
+                                    <Select labelInValue  defaultValue={{ value: 'lucy' }}  style={{ width: '80%',height:41 }}  onChange={handleChange}>
+                                        {lolpp.map((item,index)=>{
+                                            return(
+                                                <div key={index} style={{ height:41 }}>
+                                                    <p>{item.realname}</p>
+                                                </div>
+                                            )
+                                        })}
+                                    </Select>
                                 </li>
                                 <li>
                                     <h3>开始时间</h3>
@@ -99,8 +129,8 @@ function App(){
                 <div>
                     <div className="no1_3_content">
                         <Switch> 
-                            <Route path='/APP/no1_3/' component={No1_3_1}></Route>
                             <Route path='/APP/no1_3/no1_3_2' component={No1_3_2}></Route>
+                            <Route path='/APP/no1_3/' component={No1_3_1}></Route>
                         </Switch>
                     </div>
                 </div>

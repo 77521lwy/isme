@@ -89,7 +89,7 @@ function App(){
                 <ul>
                     <li>任务类型</li>
                     <li>
-                    <Cascader allowClear={type} style={{}} fieldNames={{ label: 'name', value: 'code'}} options={options} placeholder="全部"/>
+                    <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options} placeholder="全部"/>
                     </li>
                     <li>状态</li>
                     <li>
@@ -108,6 +108,7 @@ function App(){
             </div>
             <div className="no1_3_1_content">
                  <p>没有更多了</p>
+                 
             </div>
         </div>
     )
