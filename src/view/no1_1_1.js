@@ -24,7 +24,7 @@ function App(){
     })
       function getTime(num){//时间戳数据处理
 		let date = new Date(num*1000);
-		 //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+		//时间戳为10位需*1000，时间戳为13位的话不需乘1000
         let y = date.getFullYear();
         let MM = date.getMonth() + 1;
         MM = MM < 10 ? ('0' + MM) : MM;//月补0

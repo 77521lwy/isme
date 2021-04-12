@@ -68,12 +68,8 @@ function App(){
                 <div className="no1_3_title">
                     <div>
                         <Tabs defaultActiveKey="1">
-                            <TabPane tab={<span><Link to="/App/no1_3/">我的任务</Link></span>}key="1">
-                                
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/App/no1_3/no1_3_2">我下属的任务</Link></span>}key="2">
-                                
-                            </TabPane>
+                            <TabPane tab={<span><Link to="/App/no1_3/">我的任务</Link></span>}key="1"></TabPane>
+                            <TabPane tab={<span><Link to="/App/no1_3/no1_3_2">我下属的任务</Link></span>}key="2"></TabPane>
                         </Tabs>
                     </div>
                     <div className="no1_3_title_2">

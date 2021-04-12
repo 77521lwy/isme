@@ -40,12 +40,6 @@ function App(){
                             
                             </TabPane>
                         </Tabs>
-                        
-                        
-                        
-                        
-                        
-                        
                     </div>
                     <div className="no1_1_content">
                         <Switch>
