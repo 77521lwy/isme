@@ -12,7 +12,7 @@ let No2_1=function(props){
   
     return(
         <div>
-            <Link to="/app/no2/no2_1/no2_1_1">今日需联系客户</Link><br/>
+            <Link to="/app/no2/no2_1/">今日需联系客户</Link><br/>
             <Link to="/app/no2/no2_1/no2_1_2">分配给我的线索</Link><br/>
             <Link to="/app/no2/no2_1/no2_1_3">分配给我的客户</Link><br/>
             <Link to="/app/no2/no2_1/no2_1_4">待审核合同</Link><br/>
@@ -21,7 +21,7 @@ let No2_1=function(props){
             <Link to="/app/no2/no2_1/no2_1_7">即将到期的合同</Link><br/>
             <div>
                 <Switch>
-                    <Route path="/app/no2/no2_1/no2_1_1" component={no2_1_1} exact></Route>
+                    <Route path="/app/no2/no2_1/" component={no2_1_1} exact></Route>
                     <Route path="/app/no2/no2_1/no2_1_2" component={no2_1_2}></Route>
                     <Route path="/app/no2/no2_1/no2_1_3" component={no2_1_3}></Route>
                     <Route path="/app/no2/no2_1/no2_1_4" component={no2_1_4}></Route>

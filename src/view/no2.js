@@ -35,17 +35,15 @@ function No2() {
     })
   }
   return (
-    <div>
-      <div style={{ width: 256 }}>
-        <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
-          {React.createElement(state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-        </Button>
+    <div className='indexto'>
+      <div className="nav_one">
         <Menu
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           mode="inline"
           theme="dark"
           inlineCollapsed={state.collapsed}
+          style={{width:150}}
         >
           <Menu.Item key="1" icon={<PieChartOutlined />}>
             <Link to="/app/no2/no2_0">仪表盘0</Link><br />
@@ -81,7 +79,7 @@ function No2() {
           </Menu.Item>
         </Menu>
       </div>
-      <div>
+      <div className="conten">
         <Switch>
           <Route path="/app/no2/no2_1" component={no2_1}></Route>
           <Route path="/app/no2/no2_2" component={no2_2}></Route>
