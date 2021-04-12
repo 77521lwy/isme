@@ -1,4 +1,5 @@
 import {Switch,Route,Link} from 'react-router-dom' 
+import { Tabs } from 'antd';
 import Rili from './rili'
 import './no1_1.css'
 import No1_1_1 from './no1_1_1'
@@ -8,19 +9,43 @@ import No1_1_4 from './no1_1_4'
 import No1_1_5 from './no1_1_5'
 import No1_1_6 from './no1_1_6'
 
+const { TabPane } = Tabs;
+
 function App(){
-    
+    function callback(key) {
+        console.log(key);
+      }
     return(
         <div className="no1_1_box">
             <div className="no1_1_left">
                 <div>
                     <div className="no1_1_nav">
-                        <div><Link to="/App/">全部</Link></div>
-                        <div><Link to="/APP/no1_1/no1_1_2">日志</Link></div>
-                        <div><Link to="/APP/no1_1/no1_1_3">审批</Link></div>
-                        <div><Link to="/APP/no1_1/no1_1_4">任务</Link></div>
-                        <div><Link to="/APP/no1_1/no1_1_5">日程</Link></div>
-                        <div><Link to="/APP/no1_1/no1_1_6">公告</Link></div>
+                        <Tabs defaultActiveKey="1" onChange={callback}>
+                            <TabPane tab={<div><Link to="/App/">全部</Link></div>} key="1">
+                            
+                            </TabPane>
+                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_2">日志</Link></span>} key="2">
+                            
+                            </TabPane>
+                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_3">审批</Link></span>} key="3">
+                            
+                            </TabPane>
+                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_4">任务</Link></span>} key="4">
+                            
+                            </TabPane>
+                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_5">日程</Link></span>} key="5">
+                            
+                            </TabPane>
+                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_6">公告</Link></span>} key="6">
+                            
+                            </TabPane>
+                        </Tabs>
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                     <div className="no1_1_content">
                         <Switch>
