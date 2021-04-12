@@ -39,7 +39,7 @@ function App(){
           mode="inline"
           theme="dark"
           inlineCollapsed={state.collapsed}
-          style={{width:'150px'}}
+          style={{width:150}}
         >
           <Menu.Item key="1" icon={<span className="iconfont">&#xe625;</span>}>
             <Link className="linkto"  to="/App/">工作台</Link>

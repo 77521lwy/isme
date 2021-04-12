@@ -1,0 +1,29 @@
+ /* 去除默认样式 */
+*{margin: 0;padding: 0;}
+.clearfix:after,
+.clearfix:before{content: '';display: table;}
+.clearfix:after{clear: both;}
+input{ border: none; outline: none; background-color: transparent; }
+ul,ol{list-style-type: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+em,i{font-style: normal;}
+
+.plosa p{
+    display: inline-block;
+    width: 50%;
+}
+.plosa p span{
+    display: inline-block;
+    width: 100px;
+    
+}
+.plosa_content h3{
+    font-size: 13px;
+    color: #333;
+    padding-left: 8px;
+    border-left: rgb(70, 205, 207) solid 2px;
+    height: 13px;
+    line-height: 13px;
+    margin: 10px 0  ;
+}
