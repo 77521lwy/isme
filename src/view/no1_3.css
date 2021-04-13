@@ -9,7 +9,7 @@
 }
 .no1_3_nav_1{
     width: 70%;
-    min-height: 700px;
+    height: calc(100vh - 100px);
     border-radius: 1%;
     background: #fff;
     box-sizing: border-box;

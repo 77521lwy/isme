@@ -8,8 +8,6 @@ import {useState} from 'react'
 import axios from 'axios'
 
 
-
-
 function App(){
     const { Option } = Select;
     function handleChange(value) {
