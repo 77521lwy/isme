@@ -1,7 +1,7 @@
-import { Calendar, Alert } from 'antd';  //组件1
+import { Calendar,} from 'antd';  //组件1
 import React, { useState } from 'react'; //组件2
 import { Modal, Button } from 'antd';
-import { DatePicker, Space,ConfigProvider } from 'antd'; //组件3 小日历
+import { ConfigProvider } from 'antd'; //组件3 小日历
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
 import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
@@ -30,7 +30,6 @@ function App() {
     function handleCancel() {
         setIsModalVisible(false);
     };
-    const { RangePicker } = DatePicker;
     return (
         
         <div className="no1_2_box">

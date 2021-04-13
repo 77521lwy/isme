@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import {Switch,Route,Link} from 'react-router-dom' 
-import { Menu, Button } from 'antd';
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-} from '@ant-design/icons';
+import { Menu,} from 'antd';
+
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import zhCN from 'antd/lib/locale/zh_CN';
-import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
 import No1_1 from './no1_1'
@@ -18,17 +13,10 @@ import No1_5 from './no1_5'
 import No1_6 from './no1_6'
 import No1_7 from './no1_7'
 
-const { SubMenu } = Menu;
 function App(){
-  let [state,setState] = useState({
+  let [state,] = useState({
     collapsed: false,
   })
-
-  let toggleCollapsed = () => {
-    setState({
-      collapsed: !state.collapsed,
-    });
-  };
 
   return(
     <div className='indexto'>

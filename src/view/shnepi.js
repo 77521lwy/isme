@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Drawer, Form, Button, Col, Row, Input, Select, DatePicker } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+import { Drawer, Form,} from 'antd';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
@@ -31,7 +29,6 @@ function App(porps){
     }
 
     console.log(porps.num)
-    const { Option } = Select;
     const [itena,setitena] = useState([])
     // 数据接口
     axios.post('http://crm.cimns.com/index.php/oa/examine/read',{

@@ -11,7 +11,7 @@ import axios from 'axios'
 
 
 function App(){
-    const { Option } = Select;
+    // const { Option } = Select;
     function handleChange(value) {
         console.log(value);
       }

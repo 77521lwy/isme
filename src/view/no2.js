@@ -1,13 +1,11 @@
 import { Switch, Route, Link } from 'react-router-dom'
-import { Menu, Button } from 'antd';
+import { Menu,} from 'antd';
 // import moment from 'moment';
 import 'moment/locale/zh-cn';
 
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
 import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
   PieChartOutlined,
   DesktopOutlined,
   ContainerOutlined,
@@ -25,15 +23,11 @@ import no2_9 from './no2_9'
 
 
 function No2() {
-  let [state, setState] = useState({
+  let [state,] = useState({
     collapsed: false,
   })
 
-  let toggleCollapsed = () => {
-    setState({
-      collapsed: !state.collapsed,
-    })
-  }
+  
   return (
     <div className='indexto'>
       <div className="nav_one">

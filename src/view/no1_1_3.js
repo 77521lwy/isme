@@ -37,7 +37,6 @@ function App(){
         s = s < 10 ? ('0' + s) : s;//秒补0
         return y + '-' + MM + '-' + d + ' ' + h + ':' + m+ ':' + s;
     }
-      const [plos,setplos] =useState(1)
     return(
         <div>
             <div>

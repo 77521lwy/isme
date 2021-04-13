@@ -70,8 +70,7 @@ function App(){
                                         <div key={is} className="no1_1_2_ala">
                                             <div className="no1_1_2_alo">
                                                 <div className="soml_img">
-                                                    <img src={ia.userInfo.thumb_img===''?wu:ia.userInfo.thumb_img}></img>
-                                                    
+                                                    <img src={ia.userInfo.thumb_img===''?wu:ia.userInfo.thumb_img}></img>  
                                                 </div>
                                                 <p className="soml_name"> {ia.realname} </p>
                                                 <p className="soml_time"> {getTime(item.create_time) } </p>
