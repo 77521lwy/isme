@@ -6,8 +6,6 @@ import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
 import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
   PieChartOutlined,
   DesktopOutlined,
   ContainerOutlined,

@@ -2,6 +2,7 @@ import {Switch,Route,Link} from 'react-router-dom'
 import { Tabs } from 'antd';
 import No1_6_1 from './no1_6_1'
 import No1_6_2 from './no1_6_2'
+import './no1_6.css'
 
 function App(){
     const { TabPane } = Tabs;
@@ -18,7 +19,7 @@ function App(){
                     </TabPane>
                 </Tabs>
             </div>
-            <div >
+            <div className="no1_6_content">
                 <Switch>
                     <Route path='/APP/no1_6/no1_6_2' component={No1_6_2}></Route>
                     <Route path='/APP/no1_6' component={No1_6_1}></Route>

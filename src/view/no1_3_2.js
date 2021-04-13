@@ -1,6 +1,11 @@
 import './no1_3_2.css'
 import { Cascader } from 'antd';
-function App(){
+import axios from 'axios'
+import {useState,componentWillUnmount} from 'react'
+
+
+
+ function App(){
     const type=false
     const options = [
         {
@@ -100,6 +105,38 @@ function App(){
             name: '一个月到期',
         },
     ]
+    // componentWillUnmount = () => {
+    //     setmetask=()=>{
+    //         return
+    //     }
+    // }
+    const [metask,setmetask] = useState([])
+    axios.post('http://crm.cimns.com/index.php/oa/task/subTaskList',{
+        status: 1,
+        priority: 'all',
+        limit: 15,
+        page: 1
+    })
+    .then(res => {
+        console.log(res.data.data.list)
+        if(metask.length <=0){
+            setmetask(res.data.data.list)
+        }
+        console.log(metask)
+    })
+    .catch(err => {
+        console.error(err); 
+    })
+
+function add0(m){return m<10?'0'+m:m }
+function timestampToString(shijianchuo){
+    var time = new Date(shijianchuo);
+    var y = time.getFullYear();
+    var m = time.getMonth()+1;
+    var d = time.getDate();
+    return add0(m)+'-'+add0(d);
+} 
+
     return(
         <div>   
             <div className="no1_3_2_title">
@@ -130,7 +167,42 @@ function App(){
                 </div>
             </div>
             <div className="no1_3_2_content">
-                 <p>没有更多了</p>
+            {(function(){
+                     if(metask === ''){
+                        return <p>没有更多了</p>
+                     }
+                 })()}
+                 {
+                    metask.map((item,index)=>{
+                        return(
+                            <div key={index} className="metask_item clearfix">
+                                <p className="metask_name">{item.task_name}</p>
+                                <div className="metask_imgbox">
+                                    {(function(){
+                                        if(item.stop_time == 0){
+                                            return 
+                                        }
+                                        else{
+                                            return(
+                                                <div className="metask_endtime">
+                                                    <span className="iconfont">
+                                                    &#xe66d;
+                                                    </span>
+                                                    {timestampToString(item.stop_time*1000)}
+                                                    截止
+                                                </div>
+                                            )
+                                        }
+                                    })()}
+                                    <div className="metask_img">
+                                        <img src={item.main_user.img} alt='' title={item.main_user.realname}>
+                                        </img>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )
