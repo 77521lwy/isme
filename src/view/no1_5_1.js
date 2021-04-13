@@ -1,5 +1,6 @@
 import {useState} from 'react' 
 import axios from 'axios'
+import './no1_5_1.css'
 import {Select,DatePicker,Space,Cascader} from 'antd';
 
 function App() {
@@ -38,33 +39,42 @@ function App() {
         console.log(err)
     })
     return (
-        <div>
-            <div>
-                <ul>
+        <div className="no1_5_1_title">
+                <ul className="no1_5_1_content">
                     <li>
                         <h3>发起人</h3>
-                        <Select labelInValue defaultValue={{ value: '请选择' }} style={{ width: '10%', height: 41 }} onChange={handleChange}>
-                            {lolpp.map((item, index) => {
-                                return (
-                                    <div key={index} style={{ height: 41 }}>
-                                        <p>{item.realname}</p>
-                                    </div>
-                                )
-                            })}
-                        </Select>
+                        <div>
+                            <Select labelInValue defaultValue={{ value: '请选择' }} style={{ width: '100%', height: 35 }} onChange={handleChange}>
+                                {lolpp.map((item, index) => {
+                                    return (
+                                        <p key={index} style={{ height: 41 }}>
+                                            <span>{item.realname}</span>
+                                        </p>
+                                    )
+                                })}
+                            </Select>
+                        </div>
+                        
                     </li>
                     <li>
                         <h3>提交时间</h3>
-                        <Space direction="vertical">
-                            <DatePicker onChange={onChange} />
-                        </Space>
+                        <div>
+                            <Space direction="vertical">
+                                <DatePicker onChange={onChange} />
+                            </Space>
+                        </div>
+                        
                     </li>
                     <li>
                         <h3>类型</h3>
-                        <Cascader options={options} onChange={onChange1} placeholder="Please select" />
+                        <div>
+                            <Cascader options={options} onChange={onChange1} placeholder="请选择" style={{width:100}}/>
+                        </div>
                     </li>
                 </ul>
-            </div>
+                <div className="no1_5_1_bottom">
+                    <div>没有更多了</div>
+                </div>
         </div>
     )
 }

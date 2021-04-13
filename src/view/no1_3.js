@@ -8,8 +8,6 @@ import {useState} from 'react'
 import axios from 'axios'
 
 
-
-
 function App(){
     function handleChange(value) {
         console.log(value);

@@ -111,20 +111,6 @@
     float: right;
     background-color:#fff;
 }
-/* .nav_rigth button{
-    width: 80px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    border-radius: 2px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #3e84e9;
-    border-color: #3e84e9;
-    margin-top:20px;
-    margin-left: 320px;
-} */
 
 .ant-btn-primary{
     margin-left: 300px;
@@ -134,7 +120,7 @@
     z-index: 20;
 }
 .ass{
-    width:53.5%;
+    width:50%;
     height: 30px;
     border: 1px solid #ccc;
     margin-left: 25px;
@@ -161,4 +147,10 @@
     height: 150px;
     outline: none;
 }
-
+.no1_2_zzzzz{
+    display: inline-block;
+    margin-right: 50px;
+}
+.no1_2_guanlian{
+    margin-top: 30px;
+}

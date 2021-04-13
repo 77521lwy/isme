@@ -44,7 +44,7 @@ function App(){
         <div className="no1_5_nav">
             <div className="no1_5_nav_1">
                 <div className="no1_5_title">
-                    <div>
+                    <div className="no1_5_title_1">
                         <Tabs defaultActiveKey="1">
                             <TabPane tab={<span><Link to="/App/no1_5/">全部</Link></span>}key="1">
                                 
