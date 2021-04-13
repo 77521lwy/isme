@@ -4,17 +4,26 @@ import './no1_5_3.css'
 import {Select,DatePicker,Space,Cascader} from 'antd';
 
 function App() {
-    const options = [
+    const type=false
+    const options3 = [
         {
-          value: 'zhejiang',
-          label: 'Zhejiang',
-        },
-        {
-          value: 'jiangsu',
-          label: 'Jiangsu',
-        },
+            value: '全部',
+            label: '全部',
+          },
+          {
+            value: '日报',
+            label: '日报',
+          },
+          {
+              value: '周报',
+              label: '周报',
+            },
+            {
+              value: '月报',
+              label: '月报',
+            },
       ];
-    const [lolpp,setlolpp] =useState([])
+    const [lpoo,setlpoo] =useState([])
     function handleChange(value) {
         console.log(value);
     }
@@ -30,30 +39,45 @@ function App() {
             console.log(data.data.arr)
         }
         else{ 
-            if(lolpp.length <= 0){
-                setlolpp(data.data.data)
+            if(lpoo.length <= 0){
+                setlpoo(data.data.data)
             }
         }
         console.log(data.data.data)
     }, (err) => {
         console.log(err)
     })
+    const { Option } = Select;
+
+    function onChange2(value) {
+    console.log(`selected ${value}`);
+    }
+
+    function onBlur() {
+    console.log('blur');
+    }
+
+    function onFocus() {
+    console.log('focus');
+    }
+
+    function onSearch(val) {
+    console.log('search:', val);
+    }
     return (
         <div className="no1_5_3_title">
                 <ul className="no1_5_3_content">
                     <li>
                         <h3>发起人</h3>
-                        <div>
-                            <Select labelInValue defaultValue={{ value: '请选择' }} style={{ width: '100%', height: 35 }} onChange={handleChange}>
-                                {lolpp.map((item, index) => {
+                        <Select showSearch style={{ width: 100 }}  placeholder="请选择"  optionFilterProp="children"  onChange={onChange2}  onFocus={onFocus} onBlur={onBlur}  onSearch={onSearch}  filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0  }>
+                                {lpoo.map((item, index) => {
                                     return (
-                                        <p key={index} style={{ height: 41 }}>
+                                        <Option key={index} style={{ height: 41 }}>
                                             <span>{item.realname}</span>
-                                        </p>
+                                        </Option>
                                     )
                                 })}
                             </Select>
-                        </div>
                         
                     </li>
                     <li>
@@ -68,7 +92,7 @@ function App() {
                     <li>
                         <h3>类型</h3>
                         <div>
-                            <Cascader options={options} onChange={onChange1} placeholder="请选择" style={{width:100}}/>
+                            <Cascader allowClear={type} options={options3} onChange={onChange1} placeholder="请选择" style={{width:100}}/>
                         </div>
                     </li>
                 </ul>

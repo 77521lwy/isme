@@ -1,5 +1,6 @@
 import {Switch,Route,Link} from 'react-router-dom' 
-import { Modal, Button,Tabs} from 'antd';
+import { Modal, Button,Tabs,Upload, message} from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 import {useState} from 'react'
 import axios from 'axios'
 import No1_5_1 from './no1_5_1'
@@ -10,6 +11,11 @@ import './no1_5.css'
 
 function App(){
     const [lolpp,setlolpp] =useState([])
+    const { TabPane } = Tabs;
+
+    function callback(key) {
+    console.log(key);
+    }
     axios.post('http://crm.cimns.com/index.php/admin/users/getUserList').then((data) => {
         if (data.data.code === 101) {
             console.log(data.data.arr)
@@ -23,10 +29,6 @@ function App(){
     }, (err) => {
         console.log(err)
     })
-
-
-    
-    const { TabPane } = Tabs;
     const [isModalVisible, setIsModalVisible] = useState(false);
 
   function showModal(){
@@ -39,6 +41,23 @@ function App(){
 
   function handleCancel(){
     setIsModalVisible(false);
+  };
+  const props = {
+    name: 'file',
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    headers: {
+      authorization: 'authorization-text',
+    },
+    onChange(info) {
+      if (info.file.status !== 'uploading') {
+        console.log(info.file, info.fileList);
+      }
+      if (info.file.status === 'done') {
+        message.success(`${info.file.name} file uploaded successfully`);
+      } else if (info.file.status === 'error') {
+        message.error(`${info.file.name} file upload failed.`);
+      }
+    },
   };
     return(
         <div className="no1_5_nav">
@@ -64,8 +83,58 @@ function App(){
                         <Button type="primary" onClick={showModal}>
                             新建任务
                         </Button>
-                        <Modal className="no1_5_Modal" title="新建任务" okText="确定" cancelText="取消" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000} maskStyle={{background:'#ddd'}}>
-                            
+                        <Modal className="no1_5_Modal" title="新建任务" okText="确定" cancelText="取消" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={500} maskStyle={{background:'#ddd'}}>
+                            <Tabs defaultActiveKey="1" onChange={callback}>
+                                <TabPane tab="日报" key="1">
+                                    <div className="no1_5_day">
+                                        <p>今日工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>明日工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>遇到的问题:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                    </div>
+                                    <div>
+                                        <p>添加照片</p>
+                                        <Upload {...props}>
+                                            <Button icon={<PlusOutlined />}></Button>
+                                        </Upload>
+                                    </div>
+                                    
+                                </TabPane>
+                                <TabPane tab="周报" key="2">
+                                    <div className="no1_5_day">
+                                        <p>本周工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>下周工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>遇到的问题:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                    </div>
+                                    <div>
+                                        <p>添加照片</p>
+                                        <Upload {...props}>
+                                            <Button icon={<PlusOutlined />}></Button>
+                                        </Upload>
+                                    </div>
+                                </TabPane>
+                                <TabPane tab="月报" key="3">
+                                    <div className="no1_5_day">
+                                        <p>本月工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>下月工作内容:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                        <p>遇到的问题:</p>
+                                        <textarea placeholder="请输入内容"></textarea>
+                                    </div>
+                                    <div>
+                                        <p>添加照片</p>
+                                        <Upload {...props}>
+                                            <Button icon={<PlusOutlined />}></Button>
+                                        </Upload>
+                                    </div>
+                                </TabPane>
+                            </Tabs>
                         </Modal>
                     </div>
                 </div>
