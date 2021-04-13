@@ -53,7 +53,6 @@ function App(){
         </Menu>
       </div>
       <div className="conten">
-        <div>
         <Switch>
           <Route path='/APP/no1_2' component={No1_2}></Route>
           <Route path='/APP/no1_3' component={No1_3}></Route>
@@ -63,12 +62,8 @@ function App(){
           <Route path='/APP/no1_7' component={No1_7}></Route>
           <Route path='/APP/' component={No1_1}></Route>
         </Switch>
-        </div>
       </div>
     </div>
   )
 }
-  
-  
-
 export default App

@@ -16,41 +16,39 @@ function App(){
         console.log(key);
       }
     return(
-        <div className="no1_1_box">
+        <div className="no1_1_box clearfix">
             <div className="no1_1_left">
-                <div>
-                    <div className="no1_1_nav">
-                        <Tabs defaultActiveKey="1" onChange={callback}>
-                            <TabPane tab={<div><Link to="/App/">全部</Link></div>} key="1">
-                            
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_2">日志</Link></span>} key="2">
-                            
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_3">审批</Link></span>} key="3">
-                            
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_4">任务</Link></span>} key="4">
-                            
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_5">日程</Link></span>} key="5">
-                            
-                            </TabPane>
-                            <TabPane tab={<span><Link to="/APP/no1_1/no1_1_6">公告</Link></span>} key="6">
-                            
-                            </TabPane>
-                        </Tabs>
-                    </div>
-                    <div className="no1_1_content">
-                        <Switch>
-                            <Route path='/APP/no1_1/no1_1_2' component={No1_1_2}></Route>
-                            <Route path='/APP/no1_1/no1_1_3' component={No1_1_3}></Route>
-                            <Route path='/APP/no1_1/no1_1_4' component={No1_1_4}></Route>
-                            <Route path='/APP/no1_1/no1_1_5' component={No1_1_5}></Route>
-                            <Route path='/APP/no1_1/no1_1_6' component={No1_1_6}></Route>
-                            <Route path='/APP/' component={No1_1_1}></Route>
-                        </Switch>
-                    </div>
+                <div className="no1_1_nav">
+                    <Tabs defaultActiveKey="1" onChange={callback}>
+                        <TabPane tab={<div><Link to="/App/">全部</Link></div>} key="1">
+                        
+                        </TabPane>
+                        <TabPane tab={<span><Link to="/APP/no1_1/no1_1_2">日志</Link></span>} key="2">
+                        
+                        </TabPane>
+                        <TabPane tab={<span><Link to="/APP/no1_1/no1_1_3">审批</Link></span>} key="3">
+                        
+                        </TabPane>
+                        <TabPane tab={<span><Link to="/APP/no1_1/no1_1_4">任务</Link></span>} key="4">
+                        
+                        </TabPane>
+                        <TabPane tab={<span><Link to="/APP/no1_1/no1_1_5">日程</Link></span>} key="5">
+                        
+                        </TabPane>
+                        <TabPane tab={<span><Link to="/APP/no1_1/no1_1_6">公告</Link></span>} key="6">
+                        
+                        </TabPane>
+                    </Tabs>
+                </div>
+                <div className="no1_1_content">
+                    <Switch>
+                        <Route path='/APP/no1_1/no1_1_2' component={No1_1_2}></Route>
+                        <Route path='/APP/no1_1/no1_1_3' component={No1_1_3}></Route>
+                        <Route path='/APP/no1_1/no1_1_4' component={No1_1_4}></Route>
+                        <Route path='/APP/no1_1/no1_1_5' component={No1_1_5}></Route>
+                        <Route path='/APP/no1_1/no1_1_6' component={No1_1_6}></Route>
+                        <Route path='/APP/' component={No1_1_1}></Route>
+                    </Switch>
                 </div>
             </div>
             <div className="no1_1_right">

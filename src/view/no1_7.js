@@ -60,13 +60,11 @@ function App(){
                         </Tabs>
                     </div>
                 </div>
-                <div>
-                    <div className="no1_3_content">
-                        <Switch> 
-                            <Route path='/APP/no1_7/no1_7_2' component={No1_7_2}></Route>
-                            <Route path='/APP/no1_7/' component={No1_7_1}></Route>
-                        </Switch>
-                    </div>
+                <div className="no1_3_content">
+                    <Switch> 
+                        <Route path='/APP/no1_7/no1_7_2' component={No1_7_2}></Route>
+                        <Route path='/APP/no1_7/' component={No1_7_1}></Route>
+                    </Switch>
                 </div>
             </div>
             

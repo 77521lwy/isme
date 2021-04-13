@@ -40,7 +40,6 @@ function App(){
     }
     return(
         <div>
-            <div>
                 {list.map((item,index)=>{
                     return(
                         <div key={index} className="item_no1_1_1">
@@ -59,7 +58,6 @@ function App(){
                         </div>
                     )
                 })}
-            </div>
         </div>
     )
 }

@@ -140,7 +140,7 @@ function App() {
   it can be found as a welcome guest in many households across the world.
 `;
     return (
-        <div>
+        <div  className="no1_7_ppla">
             {/* 工作台72 */}
             <div><input type="text" className="no1_7_width " placeholder="搜索成员2"></input>
 

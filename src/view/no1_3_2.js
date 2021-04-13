@@ -142,28 +142,28 @@ function timestampToString(shijianchuo){
             <div className="no1_3_2_title">
                 <input type="text" placeholder="搜索人物名称" className="no1_3_2_input"></input>
                 <div>
-                <ul>
-                    <li>任务类型</li>
-                    <li>
-                    <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options} placeholder="全部"/>
-                    </li>
-                    <li>状态</li>
-                    <li>
-                        <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options2} placeholder="全部"/>
-                    </li>
-                    <li>优先级</li>
-                    <li>
-                        <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options3} placeholder="全部"/>
-                    </li>
-                    <li>截止时间</li>
-                    <li>
-                        <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options4} placeholder="全部"/>
-                    </li>
-                    <li>负责人</li>
-                    <li>
-                        <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options5} placeholder="全部"/>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>任务类型</li>
+                        <li>
+                        <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options} placeholder="全部"/>
+                        </li>
+                        <li>状态</li>
+                        <li>
+                            <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options2} placeholder="全部"/>
+                        </li>
+                        <li>优先级</li>
+                        <li>
+                            <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options3} placeholder="全部"/>
+                        </li>
+                        <li>截止时间</li>
+                        <li>
+                            <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options4} placeholder="全部"/>
+                        </li>
+                        <li>负责人</li>
+                        <li>
+                            <Cascader allowClear={type} fieldNames={{ label: 'name', value: 'code'}} options={options5} placeholder="全部"/>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div className="no1_3_2_content">

@@ -56,3 +56,14 @@
      /* margin-right: 10%; */
      margin-top: 20px;
  } 
+
+
+ .no1_7_div::-webkit-scrollbar{
+    width: 5px;
+    background-color: #eee;
+    border-radius:1px ;
+}
+.no1_7_div::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 5px;
+}

@@ -120,13 +120,11 @@ function App(){
                         </Modal>
                     </div>
                 </div>
-                <div>
-                    <div className="no1_3_content">
-                        <Switch> 
-                            <Route path='/APP/no1_3/no1_3_2' component={No1_3_2}></Route>
-                            <Route path='/APP/no1_3/' component={No1_3_1}></Route>
-                        </Switch>
-                    </div>
+                <div className="no1_3_content">
+                    <Switch> 
+                        <Route path='/APP/no1_3/no1_3_2' component={No1_3_2}></Route>
+                        <Route path='/APP/no1_3/' component={No1_3_1}></Route>
+                    </Switch>
                 </div>
             </div>
             

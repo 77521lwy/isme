@@ -9,6 +9,9 @@ a{text-decoration: none;}
 img{vertical-align: top;}
 em,i{font-style: normal;}
 
+.no1_1_box{
+    height: 100%;
+}
 .no1_1_left{
     width: 770px;
     float: left;
@@ -16,16 +19,19 @@ em,i{font-style: normal;}
     background-color: #fff;
     padding: 10px;
     border-radius:4px ;
-    height: 630px;
+    height: 100%;
 }
 .no1_1_right{
     width: 330px;
     float: left;
 }
+.no1_1_nav{
+    height: 60px;
+}
 .no1_1_content{
     width: 100%;
-    height: 540px;
-    overflow-x:auto ;
+    height: calc(100% - 60px);
+    overflow-y: scroll;
 }
 .no1_1_content::-webkit-scrollbar{
     width: 5px;
