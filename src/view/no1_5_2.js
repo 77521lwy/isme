@@ -1,18 +1,25 @@
-import {useState} from 'react' 
-import axios from 'axios'
 import './no1_5_2.css'
-import {Select,DatePicker,Space,Cascader} from 'antd';
+import {DatePicker,Space,Cascader} from 'antd';
 
 function App() {
-    const options = [
+    const type=false
+    const options2 = [
         {
-          value: 'zhejiang',
-          label: 'Zhejiang',
-        },
-        {
-          value: 'jiangsu',
-          label: 'Jiangsu',
-        },
+            value: '全部',
+            label: '全部',
+          },
+          {
+            value: '日报',
+            label: '日报',
+          },
+          {
+              value: '周报',
+              label: '周报',
+            },
+            {
+              value: '月报',
+              label: '月报',
+            },
       ];
     
     function onChange(date, dateString) {
@@ -36,7 +43,7 @@ function App() {
                     <li>
                         <h3>类型</h3>
                         <div>
-                            <Cascader options={options} onChange={onChange1} placeholder="请选择" style={{width:100}}/>
+                            <Cascader allowClear={type} options={options2} onChange={onChange1} placeholder="请选择" style={{width:100}}/>
                         </div>
                     </li>
                 </ul>
