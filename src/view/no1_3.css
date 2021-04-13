@@ -1,7 +1,13 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+ /* 去除默认样式 */
+*{margin: 0;padding: 0;}
+.clearfix:after,
+.clearfix:before{content: '';display: table;}
+.clearfix:after{clear: both;}
+input{ border: none; outline: none; background-color: transparent; }
+ul,ol{list-style-type: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+em,i{font-style: normal;}
 .no1_3_nav{
     width: 100%;
     min-height: 100%;
@@ -9,7 +15,7 @@
 }
 .no1_3_nav_1{
     width: 70%;
-    min-height: 700px;
+    height: calc(100vh - 100px);
     border-radius: 1%;
     background: #fff;
     box-sizing: border-box;
@@ -28,6 +34,7 @@
 }
 .no1_3_content{
     display: inline;
+    padding-bottom: 20px !important;
 }
 .no1_3_title div:nth-of-type(2){
     float: right;
@@ -104,4 +111,36 @@
 }
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
     height: 37px;
+}
+.metask_item{
+    text-align-last: left;margin: 0 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-bottom: #ccc solid 1px;
+}
+.metask_name{
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+.metask_imgbox{
+    float: right;display: flex;
+}
+.metask_img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.metask_endtime{
+    color: rgb(255, 96, 96);
+    font-size: 12px;
+    line-height: 40px;
+    margin-right: 20px;
+}
+.metask_endtime span{
+    display: inline-block;
+    margin-right: 10px;
 }

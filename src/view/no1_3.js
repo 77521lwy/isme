@@ -8,8 +8,6 @@ import {useState} from 'react'
 import axios from 'axios'
 
 
-
-
 function App(){
     // const { Option } = Select;
     function handleChange(value) {
@@ -25,7 +23,7 @@ function App(){
                 setlolpp(data.data.data)
             }
         }
-        console.log(data.data.data)
+        // console.log(data.data.data)
     }, (err) => {
         console.log(err)
     })
