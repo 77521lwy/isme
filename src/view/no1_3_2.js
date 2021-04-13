@@ -118,7 +118,7 @@ import {useState,componentWillUnmount} from 'react'
         page: 1
     })
     .then(res => {
-        console.log(res.data.data.list)
+        // console.log(res.data.data.list)
         if(metask.length <=0){
             setmetask(res.data.data.list)
         }
