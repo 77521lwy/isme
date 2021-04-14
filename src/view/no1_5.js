@@ -138,18 +138,15 @@ function App(){
                         </Modal>
                     </div>
                 </div>
-                <div>
-                    <div className="no1_5_content">
-                        <Switch> 
-                            <Route path='/APP/no1_5/no1_5_2' component={No1_5_2}></Route>
-                            <Route path='/APP/no1_5/no1_5_3' component={No1_5_3}></Route>
-                            <Route path='/APP/no1_5/no1_5_4' component={No1_5_4}></Route>
-                            <Route path='/APP/no1_5/' component={No1_5_1}></Route>
-                        </Switch>
-                    </div>
+                <div className="no1_5_content">
+                    <Switch> 
+                        <Route path='/APP/no1_5/no1_5_2' component={No1_5_2}></Route>
+                        <Route path='/APP/no1_5/no1_5_3' component={No1_5_3}></Route>
+                        <Route path='/APP/no1_5/no1_5_4' component={No1_5_4}></Route>
+                        <Route path='/APP/no1_5/' component={No1_5_1}></Route>
+                    </Switch>
                 </div>
             </div>
-            
         </div>
     )
 }

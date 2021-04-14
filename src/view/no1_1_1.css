@@ -36,11 +36,16 @@ em,i{font-style: normal;}
     font-size: 16px;
     line-height: 20px;
     margin-right: 20px;
+    vertical-align: top;
 }
 .txt_content{
     display: inline-block;
     font-size: 12px;
     line-height: 20px;   
+    width: 90%;
+    overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
 }
 .txt_type{
     float: right;
@@ -93,6 +98,12 @@ em,i{font-style: normal;}
     margin-bottom: 10px;
     margin: 0 -15px;
     padding-left: 20px;
+}
+.rew p {
+    width: 95%;
+    overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
 }
 .rew span{
     width: 95px;
