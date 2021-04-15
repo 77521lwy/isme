@@ -2,14 +2,9 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { Menu,} from 'antd';
 // import moment from 'moment';
 import 'moment/locale/zh-cn';
-
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
-import {
-  PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined,
-} from '@ant-design/icons';
+import {PieChartOutlined,DesktopOutlined,ContainerOutlined} from '@ant-design/icons';
 import no2_0 from './no2_0'
 import no2_1 from './no2_1'
 import no2_2 from './no2_2'
@@ -20,7 +15,7 @@ import no2_6 from './no2_6'
 import no2_7 from './no2_7'
 import no2_8 from './no2_8'
 import no2_9 from './no2_9'
-
+import './no2.css'
 
 function No2() {
   let [state,] = useState({
@@ -39,37 +34,37 @@ function No2() {
           inlineCollapsed={state.collapsed}
           style={{width:150}}
         >
-          <Menu.Item key="1" icon={<PieChartOutlined />}>
-            <Link to="/app/no2/no2_0">仪表盘0</Link><br />
+          <Menu.Item key="1" icon={<span className="iconfont">&#xe66d;</span>}>
+            <Link to="/app/no2/no2_0">仪表盘</Link><br />
 
           </Menu.Item>
-          <Menu.Item key="2" icon={<DesktopOutlined />}>
-            <Link to="/app/no2/no2_1">待办事项1</Link><br />
+          <Menu.Item key="2" icon={<span className="iconfont">&#xe62b;</span>}>
+            <Link to="/app/no2/no2_1">待办事项</Link><br />
 
           </Menu.Item>
-          <Menu.Item key="3" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_2">线索2</Link><br />
+          <Menu.Item key="3" icon={<span className="iconfont">&#xe681;</span>}>
+            <Link to="/app/no2/no2_2">线索</Link><br />
           </Menu.Item>
-          <Menu.Item key="4" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_3">客户3</Link><br />
+          <Menu.Item key="4" icon={<span className="iconfont">&#xe68e;</span>}>
+            <Link to="/app/no2/no2_3">客户</Link><br />
           </Menu.Item>
-          <Menu.Item key="5" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_4">联系人4</Link><br />
+          <Menu.Item key="5" icon={<span className="iconfont">&#xe619;</span>}>
+            <Link to="/app/no2/no2_4">联系人</Link><br />
           </Menu.Item>
-          <Menu.Item key="6" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_5">公海5</Link><br />
+          <Menu.Item key="6" icon={<span className="iconfont">&#xe611;</span>}>
+            <Link to="/app/no2/no2_5">公海</Link><br />
           </Menu.Item>
-          <Menu.Item key="7" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_6">商机6</Link><br />
+          <Menu.Item key="7" icon={<span className="iconfont">&#xe649;</span>}>
+            <Link to="/app/no2/no2_6">商机</Link><br />
           </Menu.Item>
-          <Menu.Item key="8" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_7">合同7</Link><br />
+          <Menu.Item key="8" icon={<span className="iconfont">&#xe749;</span>}>
+            <Link to="/app/no2/no2_7">合同</Link><br />
           </Menu.Item>
-          <Menu.Item key="9" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_8">回款8</Link><br />
+          <Menu.Item key="9" icon={<span className="iconfont">&#xe604;</span>}>
+            <Link to="/app/no2/no2_8">回款</Link><br />
           </Menu.Item>
-          <Menu.Item key="10" icon={<ContainerOutlined />}>
-            <Link to="/app/no2/no2_9">产品9</Link><br />
+          <Menu.Item key="10" icon={<span className="iconfont">&#xe62f;</span>}>
+            <Link to="/app/no2/no2_9">产品</Link><br />
           </Menu.Item>
         </Menu>
       </div>
