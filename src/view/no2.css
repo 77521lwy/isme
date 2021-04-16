@@ -244,7 +244,6 @@ em,i{font-style: normal;}
 .l7one{
     color: #FAE790;
 }
-
 /* 内容2 */
 .no2_0_content_item_achievement_img{
     width: 220px;
@@ -260,9 +259,7 @@ em,i{font-style: normal;}
     font-size: 12px;
     line-height: 20px;
 }
-
 /* 内容3 */
-
 .no2_0_content_item_sale_txt{
     float: left;
     margin-top: 100px;
@@ -283,18 +280,3 @@ em,i{font-style: normal;}
     color: #ff7474;
 }
 /* no2_1 */
-.no2_1_box{
-    height: 100%;
-}
-.no2_1_nav{
-    float: left;
-    height: 100%;
-    background-color: #fff;
-    margin-right: 20px;
-}
-.no2_1_content{
-    float: left;
-    background-color: #fff;
-    width: 1100px;
-    height: 100%;
-}
