@@ -158,7 +158,7 @@ let No3_1_1=function(params){
                         <div>下单时间</div>
                     </div>
                     <div className="no3_1_1_box_content_list_ciontent">
-                        <div className="no3_1_1_box_content_list_ciontent_null">暂无数据</div>
+                    <div className="no3_1_1_box_content_list_ciontent_null">暂无数据</div>
                         
                     </div>
                 </div>

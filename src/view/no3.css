@@ -128,7 +128,50 @@ em,i{font-style: normal;}
 }
 .no3_1_1_box_content_list_ciontent_null{
     text-align: center;
-    line-height: 60px;
+    line-height: 200px;
     color: #909399;
-    font-size: 20px;
+    font-size: 16px;
+}
+.thisisitembox{
+    width: 96%;
+    margin: 0 auto;
+    height: 450px;
+    border: #e6e6e6 solid 1px;
+    overflow-x: scroll;
+}
+.thisitemboxbox{
+    width: 1800px;
+    display: flex;
+}
+.thisitemboxbox .thisisitem:nth-child(n+2){
+    flex: 1;
+}
+.thisisitembox::-webkit-scrollbar{
+    height: 3px;
+    background-color: #eee;
+    border-radius:1px ;
+}
+.thisisitembox::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 5px;
+}
+.thisitemtitle{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: #e6e6e6 solid 1px;
+    border-right: #e6e6e6 solid 1px;
+}
+.thisitemboxbox .thisisitem:nth-child(1){
+    width: 200px;
+}
+.thisisitem .thisitemtitle:nth-last-child(1){
+    background-color: #fafafa;
+}
+.thisitemtoto{
+    float: left;
+    width: 516px;
+}
+.no3_1_1_box_content_asdkjal{
+    margin-left: 50px;
 }
