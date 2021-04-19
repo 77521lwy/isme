@@ -1,13 +1,7 @@
 import React,{ useState } from 'react'
 import {Switch,Route,Link } from "react-router-dom";
 import { Menu, Button } from 'antd';
-import {
-  AppstoreOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  ContainerOutlined,
-  MailOutlined,
-} from '@ant-design/icons';
+import {AppstoreOutlined,MenuUnfoldOutlined,MenuFoldOutlined,ContainerOutlined,MailOutlined,} from '@ant-design/icons';
 
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
@@ -46,6 +40,8 @@ import no3_6_8 from './no3_6_8'
 
 import no3_7_1 from './no3_7_1'
 import no3_7_2 from './no3_7_2'
+import './no3.css'
+import No3_8_1 from './no3_8_1';
 
 const { SubMenu } = Menu;
 
@@ -60,56 +56,15 @@ function No3(){
         });
       };
     return(
-        <div>
-            <div>
-                <Switch>
-                    <Route path="/App/no3/" component={no3_1_1} exact/>
-                    <Route path="/App/no3/no3_1_2" component={no3_1_2}/>
-                    <Route path="/App/no3/no3_1_3" component={no3_1_3}/>
-                    <Route path="/App/no3/no3_1_4" component={no3_1_4}/>
-                    <Route path="/App/no3/no3_1_5" component={no3_1_5}/>
-
-                    <Route path="/App/no3/no3_2_1" component={no3_2_1}/>
-                    <Route path="/App/no3/no3_2_2" component={no3_2_2}/>
-                    <Route path="/App/no3/no3_2_3" component={no3_2_3}/>
-
-                    <Route path="/App/no3/no3_3_1" component={no3_3_1}/>
-                    <Route path="/App/no3/no3_3_2" component={no3_3_2}/>
-                    <Route path="/App/no3/no3_3_3" component={no3_3_3}/>
-                    <Route path="/App/no3/no3_3_4" component={no3_3_4}/>
-
-                    <Route path="/App/no3/no3_4_1" component={no3_4_1}/>
-                    <Route path="/App/no3/no3_4_2" component={no3_4_2}/>
-                    <Route path="/App/no3/no3_4_3" component={no3_4_3}/>
-                    <Route path="/App/no3/no3_4_4" component={no3_4_4}/>
-
-                    <Route path="/App/no3/no3_5_1" component={no3_5_1}/>
-                    <Route path="/App/no3/no3_5_2" component={no3_5_2}/>
-
-                    <Route path="/App/no3/no3_6_1" component={no3_6_1}/>
-                    <Route path="/App/no3/no3_6_2" component={no3_6_2}/>
-                    <Route path="/App/no3/no3_6_3" component={no3_6_3}/>
-                    <Route path="/App/no3/no3_6_4" component={no3_6_4}/>
-                    <Route path="/App/no3/no3_6_5" component={no3_6_5}/>
-                    <Route path="/App/no3/no3_6_6" component={no3_6_6}/>
-                    <Route path="/App/no3/no3_6_7" component={no3_6_7}/>
-                    <Route path="/App/no3/no3_6_8" component={no3_6_8}/>
-
-                    <Route path="/App/no3/no3_7_1" component={no3_7_1}/>
-                    <Route path="/App/no3/no3_7_2" component={no3_7_2}/>
-                </Switch>
-            </div>    
-            <div style={{ width: 256}}>
-                <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
-                {React.createElement(state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-                </Button>
+        <div className="no3_box clearfix" >  
+            <div style={{ width: 170}} className="no3_box_nav">
                 <Menu defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline" theme="dark" inlineCollapsed={state.collapsed}>
                     <SubMenu key="sub1" icon={<MailOutlined />} title="员工客户分析">
-                        <Menu.Item key="1"><Link to="/App/no3/">客户跟进次数分析</Link></Menu.Item>
-                        <Menu.Item key="2"><Link to="/App/no3/no3_1_2">客户跟进方式分析</Link></Menu.Item>
-                        <Menu.Item key="3"><Link to="/App/no3/no3_1_3">客户转换率分析</Link></Menu.Item>
-                        <Menu.Item key="4"><Link to="/App/no3/no3_1_4">公海客户分析</Link></Menu.Item>
-                        <Menu.Item key="5"><Link to="/App/no3/no3_1_5">成交周期分析</Link></Menu.Item>
+                        <Menu.Item key="1"><Link to="/App/no3/">客户总量分析</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to="/App/no3/no3_1_2">客户跟进次数分析</Link></Menu.Item>
+                        <Menu.Item key="3"><Link to="/App/no3/no3_1_3">客户跟进方式分析</Link></Menu.Item>
+                        <Menu.Item key="4"><Link to="/App/no3/no3_1_4">客户转换率分析</Link></Menu.Item>
+                        <Menu.Item key="5"><Link to="/App/no3/no3_1_5">公海客户分析</Link></Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" icon={<AppstoreOutlined />} title="销售漏斗分析">
                         <Menu.Item key="6"><Link to="/App/no3/no3_2_1">销售漏斗</Link></Menu.Item>
@@ -146,9 +101,52 @@ function No3(){
                         <Menu.Item key="27"><Link to="/App/no3/no3_7_1">日志分析</Link></Menu.Item>
                         <Menu.Item key="28"><Link to="/App/no3/no3_7_2">审批分析</Link></Menu.Item>
                     </SubMenu>
-                    <Menu.Item key="8" icon={<ContainerOutlined />}>业绩目标分析</Menu.Item>
+                    <Menu.Item key="88" icon={<ContainerOutlined />} title="业绩目标分析">
+                        <Link to="/App/no3/no3_8_1">业绩目标分析</Link>
+                    </Menu.Item>
                 </Menu>
-            </div>   
+            </div>  
+            <div className="no3_box_content">
+                <Switch>
+                    <Route path="/App/no3/no3_1_2" component={no3_1_2}/>
+                    <Route path="/App/no3/no3_1_3" component={no3_1_3}/>
+                    <Route path="/App/no3/no3_1_4" component={no3_1_4}/>
+                    <Route path="/App/no3/no3_1_5" component={no3_1_5}/>
+
+                    <Route path="/App/no3/no3_2_1" component={no3_2_1}/>
+                    <Route path="/App/no3/no3_2_2" component={no3_2_2}/>
+                    <Route path="/App/no3/no3_2_3" component={no3_2_3}/>
+
+                    <Route path="/App/no3/no3_3_1" component={no3_3_1}/>
+                    <Route path="/App/no3/no3_3_2" component={no3_3_2}/>
+                    <Route path="/App/no3/no3_3_3" component={no3_3_3}/>
+                    <Route path="/App/no3/no3_3_4" component={no3_3_4}/>
+
+                    <Route path="/App/no3/no3_4_1" component={no3_4_1}/>
+                    <Route path="/App/no3/no3_4_2" component={no3_4_2}/>
+                    <Route path="/App/no3/no3_4_3" component={no3_4_3}/>
+                    <Route path="/App/no3/no3_4_4" component={no3_4_4}/>
+
+                    <Route path="/App/no3/no3_5_1" component={no3_5_1}/>
+                    <Route path="/App/no3/no3_5_2" component={no3_5_2}/>
+
+                    <Route path="/App/no3/no3_6_1" component={no3_6_1}/>
+                    <Route path="/App/no3/no3_6_2" component={no3_6_2}/>
+                    <Route path="/App/no3/no3_6_3" component={no3_6_3}/>
+                    <Route path="/App/no3/no3_6_4" component={no3_6_4}/>
+                    <Route path="/App/no3/no3_6_5" component={no3_6_5}/>
+                    <Route path="/App/no3/no3_6_6" component={no3_6_6}/>
+                    <Route path="/App/no3/no3_6_7" component={no3_6_7}/>
+                    <Route path="/App/no3/no3_6_8" component={no3_6_8}/>
+
+                    <Route path="/App/no3/no3_7_1" component={no3_7_1}/>
+                    <Route path="/App/no3/no3_7_2" component={no3_7_2}/>
+
+                    <Route path="/App/no3/no3_8_1" component={No3_8_1}/>
+
+                    <Route path="/App/no3/" component={no3_1_1} />
+                </Switch>
+            </div> 
         </div>
     )}
 
