@@ -1,11 +1,10 @@
 import { Calendar } from 'antd';  //组件1
 import React, { useState } from 'react'; //组件2
 import { Modal, Button } from 'antd';
-import { DatePicker,ConfigProvider } from 'antd'; //组件3 小日历
+import { ConfigProvider } from 'antd'; //组件3 小日历
 import axios from 'axios' //数据
-import {  Alert,Select } from 'antd';  //组件1
+import {  Select } from 'antd';  //组件1
 import {  Upload, } from 'antd';
-import {  Space } from 'antd'; //组件3 小日历
 import { UploadOutlined } from '@ant-design/icons';
 
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文

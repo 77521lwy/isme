@@ -4,7 +4,6 @@ import { Menu,} from 'antd';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
-import {PieChartOutlined,DesktopOutlined,ContainerOutlined} from '@ant-design/icons';
 import no2_0 from './no2_0'
 import no2_1 from './no2_1'
 import no2_2 from './no2_2'

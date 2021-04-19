@@ -1,7 +1,7 @@
 import './no1_3_2.css'
 import { Cascader } from 'antd';
 import axios from 'axios'
-import {useState,componentWillUnmount} from 'react'
+import {useState} from 'react'
 
 
 
@@ -131,7 +131,7 @@ import {useState,componentWillUnmount} from 'react'
 function add0(m){return m<10?'0'+m:m }
 function timestampToString(shijianchuo){
     var time = new Date(shijianchuo);
-    var y = time.getFullYear();
+    // var y = time.getFullYear();
     var m = time.getMonth()+1;
     var d = time.getDate();
     return add0(m)+'-'+add0(d);
@@ -179,7 +179,7 @@ function timestampToString(shijianchuo){
                                 <p className="metask_name">{item.task_name}</p>
                                 <div className="metask_imgbox">
                                     {(function(){
-                                        if(item.stop_time == 0){
+                                        if(item.stop_time === 0){
                                             return 
                                         }
                                         else{

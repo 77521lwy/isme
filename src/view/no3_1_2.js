@@ -79,7 +79,7 @@ let No3_1_1=function(params){
         console.log(res)
         if(options3.length <=0){
             let arr = []
-            for (let i = 0; i < res.data.data .length; i++){
+            for (let i = 0; i < res.data.data.length; i++){
                 arr.push({
                     value: res.data.data[i].id,
                     label:res.data.data[i].realname

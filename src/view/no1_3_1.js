@@ -107,7 +107,6 @@ function App(){
     function add0(m){return m<10?'0'+m:m }
     function timestampToString(shijianchuo){
         var time = new Date(shijianchuo);
-        var y = time.getFullYear();
         var m = time.getMonth()+1;
         var d = time.getDate();
         return add0(m)+'-'+add0(d);
@@ -150,7 +149,7 @@ function App(){
                                 <p className="metask_name">{item.task_name}</p>
                                 <div className="metask_imgbox">
                                     {(function(){
-                                        if(item.stop_time == 0){
+                                        if(item.stop_time === 0){
                                             return 
                                         }
                                         else{

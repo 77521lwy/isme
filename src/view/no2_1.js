@@ -7,14 +7,14 @@ import no2_1_4 from './no2_1_4'
 import no2_1_5 from './no2_1_5'
 import no2_1_6 from './no2_1_6'
 import no2_1_7 from './no2_1_7'
-import { Tabs, Radio, Space,changeTabPosition } from 'antd';
+import { Tabs } from 'antd';
 import { useState } from 'react'
 import './no2_1.css'
 
 const { TabPane } = Tabs;
 
 let No2_1=function(props){
-    const [state,setState ]= useState({
+    const state= useState({
     tabPosition: 'left',
     })
     const { tabPosition } = state;

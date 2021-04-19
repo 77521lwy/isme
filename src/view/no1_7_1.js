@@ -1,4 +1,3 @@
-
 import './no1_7_1.css'
 import axios from 'axios'
 import { useState } from 'react'

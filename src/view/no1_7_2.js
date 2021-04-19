@@ -1,6 +1,4 @@
-
 import './no1_7_2.css'
-
 import { Collapse } from 'antd';
 import {useState} from 'react'
 import axios from 'axios'
@@ -10,11 +8,6 @@ function App() {
     function callback(key) {
         console.log(key);
     }
-    const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 const [liataa,setlistaa] = useState({})
     const [typt,settypt] = useState(true)
     axios.post('http://crm.cimns.com/index.php/oa/addresslist/index',{
