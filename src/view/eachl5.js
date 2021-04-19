@@ -44,7 +44,7 @@ class EchartsTest extends Component {
     }
     render(){
         return (
-            <div id="main" style={{ width: 1202, height: 400 }}></div>
+            <div id="main" style={{ width: 1032, height: 400 }}></div>
         );
     }
 }
