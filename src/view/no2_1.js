@@ -24,7 +24,7 @@ let No2_1=function(props){
                 代办事项
             </div>
             <div className="no2_1_nav">
-                <Tabs tabPosition={tabPosition}  style={{width:'146px'}} hideAdd={false}>
+                <Tabs tabPosition="left"  style={{width:'146px'}} hideAdd={false}>
                     <TabPane style={{width:'200px'}} tab={<Link to="/app/no2/no2_1/">今日需联系客户</Link>} key="1">
                     </TabPane>
                     <TabPane style={{width:'200px'}} tab={<Link to="/app/no2/no2_1/no2_1_2">分配给我的线索</Link>} key="2">
