@@ -6,7 +6,6 @@ import 'antd/dist/antd.css';
 import axios from 'axios'
 import { useState } from 'react'
 
-import Eachsa from './each3'
 
 const options = [
     {
@@ -95,15 +94,15 @@ let No3_7_1=function(params){
         console.error(err); 
     })
     const [statistics,setstatistics] =useState([])
-    axios.post('http://crm.cimns.com/index.php/bi/log/statistics',{
+    axios.post('http://crm.cimns.com/index.php/bi/examine/statistics',{
         structure_id: 1,
         type: 'year'
     })
     .then(res => {
         if(statistics.length<=0){
-            setstatistics(res.data.data)
+            setstatistics(res.data.data.userList)
         }
-        console.log(res.data.data)
+        console.log(res.data.data.userList)
     })
     .catch(err => {
         console.error(err); 
@@ -148,12 +147,12 @@ let No3_7_1=function(params){
                             return(
                                 <div className="no3_1_1_box_content_list_ciontent_item" key ={index}>
                                     <div>{item.realname}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
+                                    <div>{item.count_1}</div>
+                                    <div>{item.count_2}</div>
+                                    <div>{item.count_3}</div>
+                                    <div>{item.count_4}</div>
+                                    <div>{item.count_5}</div>
+                                    <div>{item.count_6}</div>
                                 </div>
                             )  
                         })}

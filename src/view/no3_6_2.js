@@ -147,7 +147,7 @@ let No3_6_2=function(params){
                         {statistics.map((item,index)=>{
                             return(
                                 <div className="no3_1_1_box_content_list_ciontent_item" key ={index}>
-                                    <div>{index}</div>
+                                    <div>{index+1}</div>
                                     <div>{item.user_name}</div>
                                     <div>{item.structure_name}</div>
                                     <div>{item.money}</div>

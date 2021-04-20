@@ -12,7 +12,7 @@ class EchartsTest extends Component {
                 trigger: 'item'
             },
             legend: {
-                bottom: '5%',
+                bottom: '0%',
                 left: 'center'
             },
             series: [
@@ -44,7 +44,7 @@ class EchartsTest extends Component {
     }
     render(){
         return (
-            <div id="main" style={{ width: 1032, height: 400 }}></div>
+            <div id="main" style={{ width: 1170, height: 450 }}></div>
         );
     }
 }

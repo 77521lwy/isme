@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import axios from 'axios'
 import { useState } from 'react'
 
-import Eachsa from './each3'
+import Eachsa from './eachl6'
 
 const options = [
     {
@@ -166,22 +166,12 @@ let No3_8_1=function(params){
                            return(
                                <div className="no3_1_1_box_content_list_ciontent_item" key={index}>
                                   <div>{statistics[item].month}</div> 
-                                  <div>{statistics[item].rate}</div> 
-                                  <div>{statistics[item].rate}</div> 
+                                  <div>{statistics[item].receivables}</div> 
+                                  <div>{statistics[item].achiement}</div> 
                                   <div>{statistics[item].rate}</div> 
                                </div>
                            )
                        })}
-                           {/* {statistics.map((item,index)=>{
-                            return(
-                                <div className="no3_1_1_box_content_list_ciontent_item" key ={index}>
-                                    <div>{index}</div>
-                                    <div>{item.user_name}</div>
-                                    <div>{item.structure_name}</div>
-                                    <div>{item.money}</div>
-                                </div>
-                            )  
-                        })} */}
                     </div>
                 </div>
             </div>

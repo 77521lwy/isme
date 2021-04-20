@@ -94,7 +94,7 @@ let No3_6_7=function(params){
         console.error(err); 
     })
     const [statistics,setstatistics] =useState([])
-    axios.post('http://crm.cimns.com/index.php/bi/ranking/contract',{
+    axios.post('http://crm.cimns.com/index.php/bi/ranking/recordCustomer',{
         structure_id: 1,
         type: 'year'
     })
@@ -139,18 +139,18 @@ let No3_6_7=function(params){
                 <div className="no3_1_1_box_content_list"  style={{marginTop:50}}>
                     <div className="no3_1_1_box_content_list_top">
                         <div>公司总排名</div>
-                        <div>签订人</div>
+                        <div>员工</div>
                         <div>部门</div>
-                        <div>合同金额(元)</div>
+                        <div>跟进客户数(个)</div>
                     </div>
                     <div className="no3_1_1_box_content_list_ciontent">
                         {statistics.map((item,index)=>{
                             return(
                                 <div className="no3_1_1_box_content_list_ciontent_item" key ={index}>
-                                    <div>{index}</div>
+                                    <div>{index+1}</div>
                                     <div>{item.user_name}</div>
                                     <div>{item.structure_name}</div>
-                                    <div>{item.money}</div>
+                                    <div>{item.count}</div>
                                 </div>
                             )  
                         })}

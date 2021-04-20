@@ -147,9 +147,9 @@ let No3_7_1=function(params){
                                 <div className="no3_1_1_box_content_list_ciontent_item" key ={index}>
                                     <div>{item.realname}</div>
                                     <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.count}</div>
+                                    <div>{item.unReadCont}</div>
+                                    <div>{item.unCommentCount}</div>
+                                    <div>{item.commentCount}</div>
                                 </div>
                             )  
                         })}
