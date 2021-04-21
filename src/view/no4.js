@@ -1,12 +1,9 @@
 import {Route,Link,Switch} from 'react-router-dom'
 import { Menu } from 'antd';
 import {
-  AppstoreOutlined,
   DiffOutlined,
   BarChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined,
-  MailOutlined,
+  DesktopOutlined
 } from '@ant-design/icons';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
