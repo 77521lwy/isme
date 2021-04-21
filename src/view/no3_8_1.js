@@ -107,16 +107,13 @@ let No3_8_1=function(params){
             for (const index in res.data.data) {
                 arr.push(index)
             }
-            console.log(arr)
             setthisptlo(arr)
         }
-        console.log(res.data.data)
     })
     
     .catch(err => {
         console.error(err); 
     })
-    console.log(statistics)
     return(
         <div className="no3_1_1_box">
             <div className="no3_1_1_box_top">

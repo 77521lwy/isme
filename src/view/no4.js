@@ -46,7 +46,7 @@ function No4(){
                     <Menu.Item key="6"><Link to="/App/no4/no4_1_2">任务日历</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" icon={<DiffOutlined />} title="项目">
-
+            
                 </SubMenu>
                 <Menu.Item key="3" icon={<BarChartOutlined />}>
                     <Link to="/App/no4/no4_3">统计分析</Link>
@@ -62,7 +62,7 @@ function No4(){
                 </Menu.Item>
                 </Menu>
             </div>
-            <div>
+            <div className="no4_box_content">
                 <Switch>
                     <Route path="/App/no4/no4_1_2" component={no4_1_2}></Route>
                     <Route path="/App/no4/no4_3" component={no4_3}></Route>
