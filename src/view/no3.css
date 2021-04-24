@@ -175,3 +175,15 @@ em,i{font-style: normal;}
 .no3_1_1_box_content_asdkjal{
     margin-left: 50px;
 }
+.com4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+}
+#main{
+    width: 50%;
+}
+#min{
+    width: 50%;
+}

@@ -6,6 +6,8 @@ import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
 import axios from 'axios'
 import './shnepi.css'
+import wu from '../images/wu.png'
+
 
 
 moment.locale('zh-cn');
@@ -35,21 +37,31 @@ function App(porps){
         id:porps.us.action_id
     })
     .then(res => {
-        // console.log(res)
+        console.log(res)
         if(itena.length<=0){
             setitena(res.data.data)
         }
-        // console.log(itena)
     })
     .catch(err => {
         console.error(err); 
+    })
+    const [itenb,setitenb] =useState([])
+    axios.post('http://crm.cimns.com/index.php/admin/examine_flow/stepList',{
+        types: 'oa_examine',
+        flow_id: porps.us.action_id ,
+        types_id: porps.us.action_id,
+        action: 'view'
+    }).then((res)=>{
+        if(itenb.length <= 0){
+            setitenb(res.data.data.stepList)
+        }
+        console.log(itenb)
     })
     const [state,setState] = useState({ visible: false })
     const showDrawer = (index) => {
       setState({
         visible: true,
       })
-    //   console.log(index)
     };
     const onClose = () => {
       setState({
@@ -78,22 +90,22 @@ function App(porps){
             <div className="plosa">
                 {(function(){
                     if(itena.type_id){
-                        return <p> <span>请假类型</span>  {itena.type_id}</p>
+                        return <p> <span>请假类型</span>{itena.type_id}</p>
                     }
                 })()}
                 {(function(){
                     if(itena.content){
-                        return <p> <span>请假类型</span>  {itena.content}</p>
+                        return <p> <span>请假类型</span>{itena.content}</p>
                     }
                 })()}
                 {(function(){
                     if(itena.end_time){
-                        return <p> <span>开始时间</span>  {happenTimeFun(itena.create_time)} </p>
+                        return <p> <span>开始时间</span>{happenTimeFun(itena.create_time)} </p>
                     }
                 })()}
                 {(function(){
                     if(itena.end_time){
-                        return  <p> <span>结束时间</span>  {happenTimeFun(itena.end_time)} </p>
+                        return  <p> <span>结束时间</span>{happenTimeFun(itena.end_time)} </p>
 
                     }
                 })()}
@@ -104,9 +116,29 @@ function App(porps){
                 })()}
                 {(function(){
                     if(itena.remark){
-                        return <p> <span>备注</span>  {itena.remark} </p>
+                        return <p> <span>备注</span>{itena.remark} </p>
                     }
                 })()}
+            </div>
+            <div className="plosb">
+                <h3>审核信息</h3>
+                <div className="plosb_title clearfix">
+                    <div className="plosb_title_title">查看审批历史</div>
+                    <div className="plosb_title_btn">撤回审批</div>
+                </div>
+                <div className="plosb_content">
+                    {itenb.map((item,index)=>{
+                        return(
+                            <div className="create_item">
+                                <div className="aasdfwertyuiop">
+                                    <img src={item.userInfo.img===''?wu:item.userInfo.img} alt="创建人"></img>
+                                </div>
+                                {/* item.userInfo.img===''?wu:item.userInfo.img */}
+                                <span> {item.userInfo.realname}</span>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </Form>
         </Drawer>
@@ -114,5 +146,4 @@ function App(porps){
     )
 };
 
-// render(<App />, document.getElementById('root'));
 export default App

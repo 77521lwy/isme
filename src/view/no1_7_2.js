@@ -52,7 +52,7 @@ const [liataa,setlistaa] = useState({})
                                         <div className="no1_7_realname ">{itema.realname}</div>
                                         <div className="no1_7_ziti">
                                             <div> <span className="iconfont">&#xe637;</span>{itema.structure_name}</div>
-                                            <div><span className="iconfont">&#xe617;</span>{itema.post}</div>
+                                            <div><span className="iconfont">&#xe617;</span>CEO</div>
                                             <div><span className="iconfont">&#xe621;</span>{itema.username}</div>
                                         </div>
                                     </div>

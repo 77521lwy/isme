@@ -88,6 +88,24 @@ function No4_3(){
                         </div>
                     </div>
                 </div>
+                <div className="No4_3_box_content_item">
+                    <div className="No4_3_box_content_item_title clearfix">
+                        <div className="No4_3_box_content_item_title_left">成员完成情况</div>
+                    </div>
+                    <div className="No4_3_box_content_item_biaog">
+                        <div className="No4_3_box_content_item_biaog_top">
+                            <div className="No4_3_box_content_item_biaog_top_item">姓名</div>
+                            <div className="No4_3_box_content_item_biaog_top_item">任务总数</div>
+                            <div className="No4_3_box_content_item_biaog_top_item">已完成数</div>
+                            <div className="No4_3_box_content_item_biaog_top_item">未完成数</div>
+                            <div className="No4_3_box_content_item_biaog_top_item">预期数</div>
+                            <div className="No4_3_box_content_item_biaog_top_item">完成率</div>
+                        </div>
+                        <div className="No4_3_box_content_item_biaog_content">
+                            <p className="No4_3_box_content_item_biaog_content_txtt">暂无数据</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

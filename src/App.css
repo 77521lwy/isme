@@ -62,6 +62,9 @@ em,i{font-style: normal;}
 .nav_box{
   float: left;
 }
+.nav_list {
+  width: 900px; 
+}
 .nav_list div{
   display: inline-block;
   padding: 0 20px;
@@ -109,4 +112,14 @@ em,i{font-style: normal;}
   background-color: #ccc;
   border-radius: 5px;
 }
-
+.deltuichu{
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: top;
+  position: fixed;
+  width: 200px;
+  text-align: center;
+  top: 0;
+  right: 0;
+}

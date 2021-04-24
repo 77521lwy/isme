@@ -26,6 +26,10 @@ function App(props) {
   if(!localStorage.val){
     props.history.push('/')
   }
+  function deltuichu(){
+    localStorage.clear()
+    props.history.push('/')
+  }
   return (
     <div className="appbox">
       {/* 头部导航 */}
@@ -39,6 +43,7 @@ function App(props) {
           <div><Link to="/App/no3"> <span className='iconfont'>&#xe673;</span> 商业智能</Link> </div> 
           <div><Link to="/App/no4"> <span className='iconfont'>&#xe628;</span> 项目管理</Link> </div>
         </div>
+        <div className="deltuichu" onClick={()=>{deltuichu()}}>退出登录</div>
       </div>
       <div className="nav_box_content">
         {/* 路由配置 */}

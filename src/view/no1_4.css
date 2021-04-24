@@ -72,8 +72,18 @@ em,i{font-style: normal;}
 
 .no1_4_text{
     width:858px;
-    height:30px;
+    height: 450px;
+    overflow-y: scroll;
 }
 .no1_4_text_txtxt{
     text-align: center;
+}
+.no1_4_text::-webkit-scrollbar{
+    width: 4px;
+    background-color: #eee;
+    border-radius:1px ;
+}
+.no1_4_text::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 5px;
 }
